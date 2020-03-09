@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" dir="ltr">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW) wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
+    <title>Information Technology Accessibility Office Client Satisfaction Survey - ESDC / IT Accessibility office</title>
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <!-- Meta data -->
+    <meta name="description"
+        content="Web Experience Toolkit (WET) includes reusable components for building and maintaining innovative Web sites that are accessible, usable, and interoperable. These reusable components are open source software and free for use by departments and external Web communities">
+    <!-- Meta data-->
+    <!-- Load closure template scripts -->
+    <script src="https://ssl-templates.services.gc.ca/rn/cls/wet/gcweb/cdts/compiled/soyutils.js"></script>
+    <script src="https://ssl-templates.services.gc.ca/rn/cls/wet/gcweb/cdts/compiled/wet-en.js"></script>
+    <!-- Write closure template -->
+    <script src="./scripts/refTop.min.js"></script>
+</head>
+
+<body vocab="https://schema.org/" typeof="WebPage">
+    <div id="def-top">
+    </div>
+    <script>
+        var defTop = document.getElementById("def-top");
+        defTop.outerHTML = wet.builder.appTop({
+            "appName": [{
+                "text": "ESDC / IT Accessibility office",
+                "href": "https://bati-itao.github.io/"
+            }],
+           "breadcrumbs" : [{
+                "title": "Home",
+                "href" : "https://bati-itao.github.io/"
+            }],
+            "lngLinks": [{
+                "lang": "fr",
+                "href": "./client-satisfaction-fr.html",
+                "text": "Français"
+            }],
+            "menuPath": "https://bati-itao.github.io/ajax/menu-en.html"
+        });
+    </script>
+    <main property="mainContentOfPage" class="container">
+        <h1 property="name" id="wb-cont">Information Technology Accessibility Office Client Satisfaction Survey</h1>
+
+        <p>You have recently received a service from IT Accessibility Office. We would like to get your feedback to improve our service. We would really appreciate if you could take a few minutes to complete the following short survey.</p>
+
+        <form action="http://www.esdc.gc.ca/cgi-bin/emailform/index.aspx?GoCTemplateCulture=en-CA" id="a11y-survey" method="post">
+                <!-- <input name="ID" type="hidden" value="accessibility_coaching" /> -->
+                <input name="ID" type="hidden" value="Thompson" />
+                <input name="ESDCEmailForm" type="hidden" value="Y" />
+            <fieldset>
+                <legend>On a scale of 1 (very dissatisfied) to 10 (very satisfied) please rate:</legend>
+                <div class="form-group mrgn-tp-lg">
+                    <label for="satisfaction">Over-all satisfaction</label>
+                    <select class="form-control" id="satisfaction" name="satisfaction">
+                        <option label="Over-all satisfaction"></option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+                <div class="form-group mrgn-tp-lg">
+                    <label for="response">Response time</label>
+                    <select class="form-control" name="response" id="response">
+                        <option label="Response time"></option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+            </fieldset>
+                <div class="form-group mrgn-tp-lg">
+                    <label for="comments">Do you have any suggestions to improve our service or any additional comments?</label>
+                    <textarea class="form-control full-width expand" name="comments" id="comments"></textarea>
+                </div>
+            <input type="submit" value="Submit" class="printPage btn btn-primary btn-lg" />
+        </form>
+<div id="def-preFooter"></div>
+<script src="./scripts/preFooter.min.js"></script>
+</main>
+<div id="def-footer"></div>
+<script src="./scripts/appFooter.min.js"></script>
+<script src="./scripts/refFooter.min.js"></script>
+<script src="./scripts/bati-itao.min.js"></script>
+</body>
+
+</html>
