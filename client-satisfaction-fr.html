@@ -52,7 +52,7 @@
             <input name="ID" type="hidden" value="Thompson" />
             <input name="ESDCEmailForm" type="hidden" value="Y" />
             <input name="whichSurvey" type="hidden" value="Sondage sur la satisfaction">
-
+            <input name="a11y-id" id="a11y-id" type="hidden" value="">
             <fieldset>
                 <legend>Sur une échelle de 1 (très insatisfait) à 10 (très satisfait), veuillez évaluer&nbsp;:</legend>
                 <div class="form-group mrgn-tp-lg">
@@ -104,6 +104,27 @@
 <script src="./scripts/appFooter.min.js"></script>
 <script src="./scripts/refFooter.min.js"></script>
 <script src="./scripts/bati-itao.min.js"></script>
+
+<script>
+
+    // Get URL string and add it to hidden input
+    function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+        name = name.replace(/[\[\]]/g, '\\$&');
+        var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, ' '));
+    }
+
+    var getID = getParameterByName('id');
+    $(function() {
+        $('#a11y-id').val(getID);
+    });
+
+</script>
+
 </body>
 
 </html>
