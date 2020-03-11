@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" dir="ltr">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW) wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
+    <title>Intake Form - ESDC / IT Accessibility office</title>
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <!-- Meta data -->
+    <meta name="description"
+        content="Web Experience Toolkit (WET) includes reusable components for building and maintaining innovative Web sites that are accessible, usable, and interoperable. These reusable components are open source software and free for use by departments and external Web communities">
+    <!-- Meta data-->
+    <!-- Load closure template scripts -->
+    <script src="https://ssl-templates.services.gc.ca/rn/cls/wet/gcweb/cdts/compiled/soyutils.js"></script>
+    <script src="https://ssl-templates.services.gc.ca/rn/cls/wet/gcweb/cdts/compiled/wet-en.js"></script>
+    <!-- Write closure template -->
+    <script src="./scripts/refTop.min.js"></script>
+</head>
+
+<body vocab="https://schema.org/" typeof="WebPage">
+    <div id="def-top">
+    </div>
+    <script>
+        var defTop = document.getElementById("def-top");
+        defTop.outerHTML = wet.builder.appTop({
+            "appName": [{
+                "text": "ESDC / IT Accessibility office",
+                "href": "https://bati-itao.github.io/"
+            }],
+           "breadcrumbs" : [{
+                "title": "Home",
+                "href" : "https://bati-itao.github.io/"
+            }],
+            "lngLinks": [{
+                "lang": "fr",
+                "href": "./client-satisfaction-fr.html",
+                "text": "Français"
+            }],
+            "menuPath": "https://bati-itao.github.io/ajax/menu-en.html"
+        });
+    </script>
+    <main property="mainContentOfPage" class="container">
+        <h1 property="name" id="wb-cont">Intake Form</h1>
+
+        
+        <div class="wb-frmvld">
+        <form action="#" id="a11y-survey" method="post">
+                <!-- <input name="ID" type="hidden" value="accessibility_coaching" /> -->
+                <input name="ID" type="hidden" value="Thompson" />
+                <input name="ESDCEmailForm" type="hidden" value="Y" />
+                <input name="whichSurvey" type="hidden" value="Intake">
+                <input name="a11y-id" id="a11y-id" type="hidden" value="">
+                <div class="form-group mrgn-tp-lg">
+                    <label for="Category">Select a Service Category</label>
+                    <select class="form-control" name="Category" id="Category">
+                        <option disabled="disabled" aria-hidden="true">Select a Service Category</option>
+                        <option value="Assistive Technology Assessment, Support and Loan Bank">Assistive Technology Assessment, Support and Loan Bank</option>
+                        <option value="IT Accessibility Coaching, Awareness and Curriculum">IT Accessibility Coaching, Awareness and Curriculum</option>
+                        <option value="Accessibility Compliance Project">Accessibility Compliance Project</option>
+                        <option value="Web ICT Assessment">Web ICT Assessment</option>
+                        <option value="COTS ICT Assessment">COTS ICT Assessment</option>
+                        <option value="Document Accessibility Review">Document Accessibility Review</option>
+                        <option value="Procurement and General Advice on Accessible ICT">Procurement and General Advice on Accessible ICT</option>
+                        <option value="Unknown">Unknown</option>
+                    </select>
+                </div>
+                
+                <fieldset>
+                    <legend>Assistive Technology Assessment, Support and Loan Bank</legend>
+                    <div class="form-group mrgn-tp-lg">
+                        <label for="DisabilityType">Disability Type</label>
+                        <select class="form-control" name="DisabilityType" id="DisabilityType">
+                            <option disabled="disabled" aria-hidden="true">Disability Type</option>
+                            <option value="Low Vision">Low Vision</option>
+                            <option value="Blindness">Blindness</option>
+                            <option value="Mobility / Dexterity">Mobility / Dexterity</option>
+                            <option value="Hearing Impairment">Hearing Impairment</option>
+                            <option value="Cognition">Cognition</option>
+                        </select>
+                    </div>
+                    <div class="form-group mrgn-tp-lg">
+                        <label for="ataServiceType">Service Type</label>
+                        <select class="form-control" name="ataServiceType" id="ataServiceType">
+                            <option disabled="disabled" aria-hidden="true">Service Type</option>
+                            <option value="Assessment">Assessment</option>
+                            <option value="Support">Support</option>
+                            <option value="Loan Bank">Loan Bank</option>
+                        </select>
+                    </div>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>IT Accessibility Coaching, Awareness and Curriculum</legend>
+                    <div class="form-group mrgn-tp-lg">
+                        <label for="awarenessServiceType">Service Type</label>
+                        <select class="form-control" name="awarenessServiceType" id="awarenessServiceType">
+                            <option disabled="disabled" aria-hidden="true">Service Type</option>
+                            <option value="Coaching half day for managers and up">Coaching half day for managers and up</option>
+                            <option value="Coaching full day for developers">Coaching full day for developers</option>
+                            <option value="Awareness">Awareness</option>
+                            <option value="Curriculum">Curriculum</option>
+                        </select>
+                    </div>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Accessibility Compliance Project</legend>
+                    <div class="form-group mrgn-tp-lg">
+                        <label for="ProjectType">Project Type</label>
+                        <select class="form-control" name="ProjectType" id="ProjectType">
+                            <option disabled="disabled" aria-hidden="true">Project Type</option>
+                            <option value="New">New</option>
+                            <option value="On-going">On-going</option>
+                        </select>
+                    </div>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Web ICT Assessment</legend>
+                    <div class="form-group mrgn-tp-lg">
+                        <label for="Websitecategory">Website category</label>
+                        <select class="form-control" name="Websitecategory" id="Websitecategory">
+                            <option disabled="disabled" aria-hidden="true">Website category</option>
+                            <option value="Internal">Internal</option>
+                            <option value="External">External</option>
+                        </select>
+                    </div>
+                    <div class="form-group mrgn-tp-lg">
+                        <label for="url">URL of the site</label>
+                        <input class="form-control full-width" id="url" name="url" type="url" />
+                    </div>
+                    <div class="form-group mrgn-tp-lg">
+                        <label for="username">User Name</label>
+                        <input class="form-control full-width" id="username" name="username" type="text" />
+                    </div>
+                    <div class="form-group mrgn-tp-lg">
+                        <label for="password">Password</label> 
+                        <input class="form-control full-width" id="password" name="password" type="text" />
+                    </div>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>COTS ICT Assessment</legend>
+                    <div class="form-group mrgn-tp-lg">
+                        <label for="ProductName">Product Name</label>
+                        <input class="form-control full-width" id="ProductName" name="ProductName" type="text" />
+                    </div>
+                    <div class="form-group mrgn-tp-lg">
+                        <label for="cots_url">URL of the site</label>
+                        <input class="form-control full-width" id="cots_url" name="cots_url" type="url" />
+                    </div>
+                    <div class="form-group mrgn-tp-lg">
+                        <label for="cots_username">User Name</label>
+                        <input class="form-control full-width" id="cots_username" name="cots_username" type="text" />
+                    </div>
+                    <div class="form-group mrgn-tp-lg">
+                        <label for="cots_password">Password</label> 
+                        <input class="form-control full-width" id="cots_password" name="cots_password" type="text" />
+                    </div>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Document Accessibility Review</legend>
+                    <div class="form-group mrgn-tp-lg">
+                        <label for="DocumentType">Document Type</label>
+                        <select class="form-control" name="DocumentType" id="DocumentType">
+                            <option disabled="disabled" aria-hidden="true">Document Type</option>
+                            <option value="Microsoft Office">Microsoft Office</option>
+                            <option value="PDF">PDF</option>
+                        </select>
+                    </div>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Procurement and General Advice on Accessible Information and Communication Technology (ICT)</legend>
+                    <div class="form-group mrgn-tp-lg">
+                        <label for="ICT_Type">ICT Type</label>
+                        <select class="form-control" name="ICT_Type" id="ICT_Type">
+                            <option disabled="disabled" aria-hidden="true">ICT Type</option>
+                            <option value="Software">Software</option>
+                            <option value="Hardware">Hardware</option>
+                            <option value="ICT with Two Way Communication">ICT with Two Way Communication</option>
+                            <option value="Relay and Emergency Services">Relay and Emergency Services</option>
+                        </select>
+                    </div>
+                </fieldset>
+
+
+                <fieldset>
+                    <legend>Client Information</legend>
+                        <div class="form-group">
+                            <label for="LastName">Last Name</label>
+                            <input class="form-control full-width" id="LastName" autocomplete="family-name" name="LastName" type="text" />
+                        </div>
+                        <div class="form-group">
+                            <label for="FirstName">First Name</label>
+                            <input class="form-control full-width" id="FirstName" autocomplete="given-name" name="FirstName" type="text" />
+                        </div>
+                        <div class="form-group">
+                            <label for="PhoneNumber">Phone Number (including area code)</label>
+                            <input class="form-control" id="PhoneNumber" placeholder="333-333-3333" name="PhoneNumber" autocomplete="tel" data-rule-phoneUS="true" type="tel" />
+                        </div>
+                        <div class="form-group">
+                            <label for="EmailAddress">Email Address</label>
+                            <input class="form-control full-width" id="EmailAddress" name="EmailAddress" autocomplete="email" type="email" />
+                        </div>
+                    </fieldset>
+                    <div class="form-group mrgn-tp-lg">
+                        <label for="additionalInfo">Any additional information</label>
+                        <textarea name="additionalInfo" id="additionalInfo" class="form-control full-width expand"></textarea>
+                    </div>
+                </fieldset>
+           <input type="submit" value="Submit" class="btn btn-primary btn-lg" />
+        </form>
+        </div>
+<div id="def-preFooter"></div>
+<script src="./scripts/preFooter.min.js"></script>
+</main>
+<div id="def-footer"></div>
+<script src="./scripts/appFooter.min.js"></script>
+<script src="./scripts/refFooter.min.js"></script>
+<script src="./scripts/bati-itao.min.js"></script>
+<script>
+
+    // Get URL string and add it to hidden input
+    function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+        name = name.replace(/[\[\]]/g, '\\$&');
+        var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, ' '));
+    }
+
+    var getID = getParameterByName('id');
+    $(function() {
+        $('#a11y-id').val(getID);
+    });
+
+</script>
+
+</body>
+
+</html>
