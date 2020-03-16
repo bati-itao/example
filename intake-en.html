@@ -52,51 +52,59 @@
                 <input name="ESDCEmailForm" type="hidden" value="Y" />
                 <input name="whichSurvey" type="hidden" value="Intake">
                 <input name="a11y-id" id="a11y-id" type="hidden" value="">
-                <div class="form-group mrgn-tp-lg">
-                    <label for="Category">Select a Service Category</label>
-                    <select class="form-control" name="Category" id="Category">
-                        <option disabled="disabled" aria-hidden="true">Select a Service Category</option>
-                        <option value="Assistive Technology Assessment, Support and Loan Bank">Assistive Technology Assessment, Support and Loan Bank</option>
-                        <option value="IT Accessibility Coaching, Awareness and Curriculum">IT Accessibility Coaching, Awareness and Curriculum</option>
-                        <option value="Accessibility Compliance Project">Accessibility Compliance Project</option>
-                        <option value="Web ICT Assessment">Web ICT Assessment</option>
-                        <option value="COTS ICT Assessment">COTS ICT Assessment</option>
-                        <option value="Document Accessibility Review">Document Accessibility Review</option>
-                        <option value="Procurement and General Advice on Accessible ICT">Procurement and General Advice on Accessible ICT</option>
-                        <option value="Unknown">Unknown</option>
-                    </select>
+
+                <div class="wb-fieldflow" data-wb-fieldflow='{"noForm": true}'>
+                    <p>Select a Service Category</p>
+                    <ul>
+                        <li data-wb-fieldflow='{"action": "toggle", "toggle": "#toggle1 , #clientInformation", "live": true}'>Assistive Technology Assessment, Support and Loan Bank</li>
+                        <li data-wb-fieldflow='{"action": "toggle", "toggle": "#toggle2 , #clientInformation", "live": true}'>IT Accessibility Coaching, Awareness and Curriculum</li>
+                        <li data-wb-fieldflow='{"action": "toggle", "toggle": "#toggle3 , #clientInformation", "live": true}'>Accessibility Compliance Project</li>
+                        <li data-wb-fieldflow='{"action": "toggle", "toggle": "#toggle4 , #clientInformation", "live": true}'>Web ICT Assessment</option>
+                        <li data-wb-fieldflow='{"action": "toggle", "toggle": "#toggle5 , #clientInformation", "live": true}'>COTS ICT Assessment</option>
+                        <li data-wb-fieldflow='{"action": "toggle", "toggle": "#toggle6 , #clientInformation", "live": true}'>Document Accessibility Review</option>
+                        <li data-wb-fieldflow='{"action": "toggle", "toggle": "#toggle7 , #clientInformation", "live": true}'>Procurement and General Advice on Accessible ICT</option>
+                        <li data-wb-fieldflow='{"action": "toggle", "toggle": "#toggle8 , #clientInformation , #generalRequest", "live": true}'>Unknown</option>
+                    </ul>
                 </div>
+
+                <div class="form-group mrgn-tp-lg hidden" id="generalRequest">
+                    <label for="request">Describe you request</label>
+                    <textarea class="full-width expand form-control" name="request" id="request"></textarea>
+                </div>
+
                 
-                <fieldset>
+                <fieldset id="toggle1" class="hidden">
                     <legend>Assistive Technology Assessment, Support and Loan Bank</legend>
                     <div class="form-group mrgn-tp-lg">
                         <label for="DisabilityType">Disability Type</label>
                         <select class="form-control" name="DisabilityType" id="DisabilityType">
-                            <option disabled="disabled" aria-hidden="true">Disability Type</option>
+                            <option disabled="disabled" selected="selected" aria-hidden="true">Disability Type</option>
                             <option value="Low Vision">Low Vision</option>
                             <option value="Blindness">Blindness</option>
                             <option value="Mobility / Dexterity">Mobility / Dexterity</option>
                             <option value="Hearing Impairment">Hearing Impairment</option>
                             <option value="Cognition">Cognition</option>
+                            <option value="Unknow">Unknown</option>
                         </select>
                     </div>
                     <div class="form-group mrgn-tp-lg">
                         <label for="ataServiceType">Service Type</label>
                         <select class="form-control" name="ataServiceType" id="ataServiceType">
-                            <option disabled="disabled" aria-hidden="true">Service Type</option>
+                            <option disabled="disabled" selected="selected">Make your selection...</option>
                             <option value="Assessment">Assessment</option>
                             <option value="Support">Support</option>
                             <option value="Loan Bank">Loan Bank</option>
                         </select>
                     </div>
+                    <div class="form-group"></div>
                 </fieldset>
                 
-                <fieldset>
+                <fieldset id="toggle2" class="hidden">
                     <legend>IT Accessibility Coaching, Awareness and Curriculum</legend>
                     <div class="form-group mrgn-tp-lg">
                         <label for="awarenessServiceType">Service Type</label>
                         <select class="form-control" name="awarenessServiceType" id="awarenessServiceType">
-                            <option disabled="disabled" aria-hidden="true">Service Type</option>
+                            <option disabled="disabled" selected="selected">Make your selection...</option>
                             <option value="Coaching half day for managers and up">Coaching half day for managers and up</option>
                             <option value="Coaching full day for developers">Coaching full day for developers</option>
                             <option value="Awareness">Awareness</option>
@@ -105,24 +113,24 @@
                     </div>
                 </fieldset>
                 
-                <fieldset>
+                <fieldset id="toggle3" class="hidden">
                     <legend>Accessibility Compliance Project</legend>
                     <div class="form-group mrgn-tp-lg">
                         <label for="ProjectType">Project Type</label>
                         <select class="form-control" name="ProjectType" id="ProjectType">
-                            <option disabled="disabled" aria-hidden="true">Project Type</option>
+                            <option disabled="disabled" selected="selected">Make your selection...</option>
                             <option value="New">New</option>
                             <option value="On-going">On-going</option>
                         </select>
                     </div>
                 </fieldset>
                 
-                <fieldset>
+                <fieldset id="toggle4" class="hidden">
                     <legend>Web ICT Assessment</legend>
                     <div class="form-group mrgn-tp-lg">
                         <label for="Websitecategory">Website category</label>
                         <select class="form-control" name="Websitecategory" id="Websitecategory">
-                            <option disabled="disabled" aria-hidden="true">Website category</option>
+                            <option disabled="disabled" selected="selected">Make your selection...</option>
                             <option value="Internal">Internal</option>
                             <option value="External">External</option>
                         </select>
@@ -141,7 +149,7 @@
                     </div>
                 </fieldset>
                 
-                <fieldset>
+                <fieldset id="toggle5" class="hidden">
                     <legend>COTS ICT Assessment</legend>
                     <div class="form-group mrgn-tp-lg">
                         <label for="ProductName">Product Name</label>
@@ -161,24 +169,24 @@
                     </div>
                 </fieldset>
                 
-                <fieldset>
+                <fieldset id="toggle6" class="hidden">
                     <legend>Document Accessibility Review</legend>
                     <div class="form-group mrgn-tp-lg">
                         <label for="DocumentType">Document Type</label>
                         <select class="form-control" name="DocumentType" id="DocumentType">
-                            <option disabled="disabled" aria-hidden="true">Document Type</option>
+                            <option disabled="disabled" selected="selected">Make your selection...</option>
                             <option value="Microsoft Office">Microsoft Office</option>
                             <option value="PDF">PDF</option>
                         </select>
                     </div>
                 </fieldset>
                 
-                <fieldset>
+                <fieldset id="toggle7" class="hidden">
                     <legend>Procurement and General Advice on Accessible Information and Communication Technology (ICT)</legend>
                     <div class="form-group mrgn-tp-lg">
                         <label for="ICT_Type">ICT Type</label>
                         <select class="form-control" name="ICT_Type" id="ICT_Type">
-                            <option disabled="disabled" aria-hidden="true">ICT Type</option>
+                            <option disabled="disabled" selected="selected">Make your selection...</option>
                             <option value="Software">Software</option>
                             <option value="Hardware">Hardware</option>
                             <option value="ICT with Two Way Communication">ICT with Two Way Communication</option>
@@ -187,31 +195,31 @@
                     </div>
                 </fieldset>
 
-
+                <div id="clientInformation" class="hidden">
                 <fieldset>
                     <legend>Client Information</legend>
-                        <div class="form-group">
-                            <label for="LastName">Last Name</label>
-                            <input class="form-control full-width" id="LastName" autocomplete="family-name" name="LastName" type="text" />
-                        </div>
-                        <div class="form-group">
-                            <label for="FirstName">First Name</label>
-                            <input class="form-control full-width" id="FirstName" autocomplete="given-name" name="FirstName" type="text" />
-                        </div>
-                        <div class="form-group">
-                            <label for="PhoneNumber">Phone Number (including area code)</label>
-                            <input class="form-control" id="PhoneNumber" placeholder="333-333-3333" name="PhoneNumber" autocomplete="tel" data-rule-phoneUS="true" type="tel" />
-                        </div>
-                        <div class="form-group">
-                            <label for="EmailAddress">Email Address</label>
-                            <input class="form-control full-width" id="EmailAddress" name="EmailAddress" autocomplete="email" type="email" />
-                        </div>
-                    </fieldset>
-                    <div class="form-group mrgn-tp-lg">
-                        <label for="additionalInfo">Any additional information</label>
-                        <textarea name="additionalInfo" id="additionalInfo" class="form-control full-width expand"></textarea>
+                    <div class="form-group">
+                        <label for="LastName">Last Name</label>
+                        <input class="form-control full-width" id="LastName" autocomplete="family-name" name="LastName" type="text" />
+                    </div>
+                    <div class="form-group">
+                        <label for="FirstName">First Name</label>
+                        <input class="form-control full-width" id="FirstName" autocomplete="given-name" name="FirstName" type="text" />
+                    </div>
+                    <div class="form-group">
+                        <label for="PhoneNumber">Phone Number (including area code)</label>
+                        <input class="form-control" id="PhoneNumber" placeholder="333-333-3333" name="PhoneNumber" autocomplete="tel" data-rule-phoneUS="true" type="tel" />
+                    </div>
+                    <div class="form-group">
+                        <label for="EmailAddress">Email Address</label>
+                        <input class="form-control full-width" id="EmailAddress" name="EmailAddress" autocomplete="email" type="email" />
                     </div>
                 </fieldset>
+                <div class="form-group mrgn-tp-lg">
+                    <label for="additionalInfo">Any additional information</label>
+                    <textarea name="additionalInfo" id="additionalInfo" class="form-control full-width expand"></textarea>
+                </div>
+            </div>
            <input type="submit" value="Submit" class="btn btn-primary btn-lg" />
         </form>
         </div>
