@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" dir="ltr">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW) wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
+    <title>Are CAPTCHAs accessible? - ESDC / IT Accessibility office</title>
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <!-- Meta data -->
+    <meta name="description"
+        content="IT Accessibility Office provides adaptive technology and advocate for inclusiveness of people with disabilities in the workplace.">
+    <!-- Meta data-->
+    <!-- Load closure template scripts -->
+    <script src="https://ssl-templates.services.gc.ca/rn/cls/wet/gcweb/cdts/compiled/soyutils.js"></script>
+    <script src="https://ssl-templates.services.gc.ca/rn/cls/wet/gcweb/cdts/compiled/wet-en.js"></script>
+    <!-- Write closure template -->
+    <script src="./scripts/refTop.min.js"></script>
+</head>
+
+<body vocab="https://schema.org/" typeof="WebPage">
+    <div id="def-top">
+    </div>
+    <!-- Write closure template -->
+    <script>
+        var defTop = document.getElementById("def-top");
+        defTop.outerHTML = wet.builder.appTop({
+            "appName": [{
+                "text": "ESDC / IT Accessibility office",
+                "href": "https://bati-itao.github.io/index-en.html"
+            }],
+            "breadcrumbs": [{
+                "title": "Home",
+                "href": "https://bati-itao.github.io/index-en.html"
+            }],
+            "lngLinks": [{
+                "lang": "fr",
+                "href": "./index-fr.html",
+                "text": "Français"
+            }],
+            "menuPath": "https://bati-itao.github.io/ajax/menu-en.html"
+        });
+    </script>
+    <main role="main" property="mainContentOfPage" class="container">
+        <h1 property="name" id="wb-cont">Are CAPTCHAs accessible?</h1>
+
+        <p>Why are the usual strategies used online not accessible and not an option for us? The following CAPTCHA’s are
+            typically used to prevent BOT attacks but are not accessible or fully compliant, and/or have other
+            identified challenges.</p>
+        <h2>CAPTCHAs</h2>
+        <h3>Image based CAPTCHA’s</h3>
+        <p>Not accessible as visually impaired people cannot see the images and input the requested information.</p>
+        <h3>Audio CAPTCHA</h3>
+        <p>This will work with the screen readers, as the user can “hear” the word(s), but it can be exploited by smart
+            and presents the same problem as Image Based CAPTCHA’s for the visually impaired. Here is an <a href="https://gbhackers.com/security-researcher-breaks-googles-recaptcha-v2-using-googles-tool/">audio CAPTCHA</a> that covers it in details.</p>
+        <h3>reCAPTCHA</h3>
+        <p>Uses digitized words but presents the same problem as Image Based CAPTCHA’s for the visually impaired.</p>
+        <h2>Alternative methods</h2>
+        <p>In addition to the above mentioned CAPTCHA’s. the following are also used to prevent attacks.</p>
+        <h3>Common names are not used for attributes</h3>
+        <p>When bots crawl, they typically look for common field names like email address, name etc. This information
+            can be made obscure as a way to deter bots but it would be confusing for our legitimate end users. This
+            option is accessible, but not user friendly.</p>
+        <h3>Hidden input fields</h3>
+        <p>A field that is not required for business can be hidden using Cascading Style Sheets (CSS). A BOT would
+            typically complete this hidden field and upon Submit, we can check if that field has data and if it does we
+            simply reject submission. This option is accessible, but can be hacked.</p>
+        <h3>Random question</h3>
+        <p>Random questions can be asked based on “other” input from the user. For example: What is the second and
+            seventh digit of your phone number. This option is accessible, but can be hacked and there is a significant
+            level of effort required to implement this option.</p>
+        <h3>Email address field/confirmation process</h3>
+        <p>Capturing an email address and implementing an email confirmation process protects against BOT attacks
+            because an email which contains a unique confirmation link is sent to the user immediately after form
+            submission. Successful confirmation via this link verifies the authenticity of the user and persists the
+            data. If the subscription is not confirmed, within a period of time as identified by the business, the data
+            is discarded. This ensures that the data committed to the database is from actual users and not BOT
+            submissions, which in-turn ensures the integrity and accuracy of the Youth Service data.</p>
+        <h2>Additional information</h2>
+        <p>To further secure the form data, it is recommended that the following additional functionality be
+            implemented as further security.</p>
+        <h4>Hidden input fields</h4>
+        <p>Although as mentioned above, on its own this option is not completely secure but when used with the email
+            address/confirmation process it adds an additional layer to protect data and is not difficult to implement.
+            To ensure accessibility and compliance, this field will be hidden visually and from screen readers, and the
+            input value of this field will be checked before accepting submission of data.</p>
+        <h2>Recommendation</h2>
+        <p>Implementation of the following methods for the web form are recommended to optimize user
+            experience and accessibility, as well as ensure data integrity and accuracy:</p>
+        <ul>
+            <li>Include a required email address field/confirmation process and persist data only upon successful
+                confirmation.</li>
+            <li>Enable hidden field validation on form submission.</li>
+        </ul>
+        
+        <p>If you wish to know more information about CAPTCHAs and alternative methods to prevent BOT attacks we encourage you to visit the <a href="https://www.w3.org/WAI/GL/wiki/Captcha_Alternatives_and_thoughts">Captcha Alternative and thoughts</a> page on the W3C website.</p>
+    
+        <div id="def-preFooter"></div>
+        <script src="./scripts/preFooter.min.js"></script>
+    </main>
+    <div id="def-footer"></div>
+    <script src="./scripts/appFooter.min.js"></script>
+    <script src="./scripts/refFooter.min.js"></script>
+    <script src="./scripts/bati-itao.min.js"></script>
+</body>
+
+</html>
