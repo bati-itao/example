@@ -6,11 +6,11 @@
 <head>
     <meta charset="utf-8">
     <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW) wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
-    <title>Sondage sur la satisfaction de la clientèle du Bureau de l’accessibilité de la technologie de l’information - EDSC / Bureau de l’accessibilité de la TI</title>
+    <title>Formulaire d'admission - EDSC / Bureau de l’accessibilité de la TI</title>
     <meta content="width=device-width,initial-scale=1" name="viewport">
     <!-- Meta data -->
     <meta name="description"
-        content="Le bureau de l'accessibilite des TI est fournisseur de technologie adaptative et l'avocat pour l'inclusion des personnes ayant des handicaps dans le lieu du travail.">
+        content="Formulaire d'admission pour le Bureau de l’accessibilité de la TI">
     <!-- Meta data-->
     <!-- Load closure template scripts -->
     <script src="https://ssl-templates.services.gc.ca/rn/cls/wet/gcweb/cdts/compiled/soyutils.js"></script>
@@ -22,7 +22,6 @@
 <body vocab="https://schema.org/" typeof="WebPage">
     <div id="def-top">
     </div>
-    <!-- Write closure template -->
     <script>
         var defTop = document.getElementById("def-top");
         defTop.outerHTML = wet.builder.appTop({
@@ -36,67 +35,216 @@
             }],
             "lngLinks": [{
                 "lang": "en",
-                "href": "./client-satisfaction-en.html",
+                "href": "./intake-en.html",
                 "text": "English"
             }],
-            "menuPath": "https://bati-itao.github.io/ajax/menu-fr.html"
+			"menuPath": "https://bati-itao.github.io/ajax/menu-fr.html"
         });
     </script>
     <main property="mainContentOfPage" class="container">
-        <h1 property="name" id="wb-cont">Sondage sur la satisfaction de la clientèle du Bureau de l’accessibilité de la technologie de l’information</h1>
+        <h1 property="name" id="wb-cont">Formulaire d'admission</h1>
+        
+        <div class="wb-frmvld">
+        <form action="#" id="a11y-survey" method="post">
+                <!-- <input name="ID" type="hidden" value="accessibility_coaching" /> -->
+                <input name="ID" type="hidden" value="Thompson" />
+                <input name="ESDCEmailForm" type="hidden" value="Y" />
+                <input name="whichSurvey" type="hidden" value="Formulaire admission">
 
-        <p>Vous avez récemment reçu un service de la part du Bureau de l’accessibilité de la TI. Nous aimerions obtenir votre rétroaction afin d’améliorer notre service. Nous vous serions très reconnaissants si vous pouviez prendre quelques minutes pour répondre au court sondage suivant&nbsp;:</p>
+                <div class="wb-fieldflow" data-wb-fieldflow='{"noForm": true}'>
+                    <p>Sélectionnez une catégorie de service</p>
+                    <ul>
+                        <li data-wb-fieldflow='{"action": "toggle", "toggle": "#toggle1 , #clientInformation", "live": true}'>Banque d&rsquo;évaluation, de soutien et de prêt des technologies d&rsquo;assistance</li>
+                        <li data-wb-fieldflow='{"action": "toggle", "toggle": "#toggle2 , #clientInformation", "live": true}'>Coaching, sensibilisation et programme d&rsquo;études sur l&rsquo;accessibilité des TI</li>
+                        <li data-wb-fieldflow='{"action": "toggle", "toggle": "#toggle3 , #clientInformation", "live": true}'>Projet de conformité à l&rsquo;accessibilité</li>
+                        <li data-wb-fieldflow='{"action": "toggle", "toggle": "#toggle4 , #clientInformation", "live": true}'>Évaluation des technologies de l&rsquo;information et des communications (TIC) sur le web</li>
+                        <li data-wb-fieldflow='{"action": "toggle", "toggle": "#toggle5 , #clientInformation", "live": true}'>Évaluation des technologies de l&rsquo;information et des communications (TIC) de produits COTS</li>
+                        <li data-wb-fieldflow='{"action": "toggle", "toggle": "#toggle6 , #clientInformation", "live": true}'>Examen de l&rsquo;accessibilité des documents</li>
+                        <li data-wb-fieldflow='{"action": "toggle", "toggle": "#toggle7 , #clientInformation", "live": true}'>Marchés publics et conseils généraux sur les technologies de l&rsquo;information et de la communication (TIC) accessibles</li>
+                        <li data-wb-fieldflow='{"action": "toggle", "toggle": "#followUp , #generalRequest , #clientInformation", "live": true}'>Suivi de la demande précédente</li>
+                        <li data-wb-fieldflow='{"action": "toggle", "toggle": "#clientInformation , #generalRequest", "live": true}'>Autres</li>
+                    </ul>
+                </div>
 
-        <form action="http://www.esdc.gc.ca/cgi-bin/emailform/index.aspx?GoCTemplateCulture=en-CA" id="a11y-survey" method="post">
-            <!-- <input name="ID" type="hidden" value="accessibility_coaching" /> -->
-            <input name="ID" type="hidden" value="Thompson" />
-            <input name="ESDCEmailForm" type="hidden" value="Y" />
-            <input name="whichSurvey" type="hidden" value="Sondage sur la satisfaction">
-            <input name="a11y-id" id="a11y-id" type="hidden" value="">
-            <fieldset>
-                <legend>Sur une échelle de 1 (très insatisfait) à 10 (très satisfait), veuillez évaluer&nbsp;:</legend>
+                <div class="form-group mrgn-tp-lg hidden" id="generalRequest">
+                    <label for="request">Décrivez votre demande</label>
+                    <textarea class="full-width expand form-control" name="request" id="request"></textarea>
+				</div>
+				
+                <div class="form-group mrgn-tp-lg hidden" id="followUp">
+                    <label for="caseNumber">Numéro de dossier</label>
+                    <textarea class="full-width expand form-control" name="caseNumber" id="caseNumber"></textarea>
+				</div>
+				
+                <fieldset id="toggle1" class="hidden">
+                    <legend>Banque d&rsquo;évaluation, de soutien et de prêt des technologies d'assistance</legend>
+                    <div class="form-group mrgn-tp-lg">
+                        <label for="DisabilityType">Type de handicap</label>
+                        <select class="form-control" name="DisabilityType" id="DisabilityType">
+                            <option disabled="disabled" selected="selected">Faites votre choix...</option>
+                            <option value="Low Vision">Basse vision</option>
+                            <option value="Blindness">Aveugles</option>
+                            <option value="Mobility / Dexterity">Mobilité / Dextérité</option>
+                            <option value="Hearing Impairment">Déficience auditive</option>
+                            <option value="Cognition">Cognition</option>
+                            <option value="Other">Autres</option>
+                        </select>
+                    </div>
+                    <div class="form-group mrgn-tp-lg">
+                        <label for="ataServiceType">Type de service</label>
+                        <select class="form-control" name="ataServiceType" id="ataServiceType">
+                            <option disabled="disabled" selected="selected">Faites votre choix...</option>
+                            <option value="Assessment">Évaluation</option>
+                            <option value="Support">Soutien</option>
+                            <option value="Loan Bank">Banque de prêts</option>
+                        </select>
+                    </div>
+                    <div class="form-group"></div>
+                </fieldset>
+                
+                <fieldset id="toggle2" class="hidden">
+                    <legend>Coaching, sensibilisation et programme d'études sur l'accessibilité des TI</legend>
+                    <div class="form-group mrgn-tp-lg">
+                        <label for="awarenessServiceType">Type de service</label>
+                        <select class="form-control" name="awarenessServiceType" id="awarenessServiceType">
+                            <option disabled="disabled" selected="selected">Faites votre choix...</option>
+                            <option value="Coaching half day for managers and up">Demi-journée de coaching pour les gestionnaires et plus</option>
+                            <option value="Coaching full day for developers">Une journée entière de coaching pour les développeurs</option>
+                            <option value="Awareness">Sensibilisation</option>
+                            <option value="Curriculum">Curriculum</option>
+                        </select>
+                    </div>
+                </fieldset>
+                
+                <fieldset id="toggle3" class="hidden">
+                    <legend>Projet de conformité à l'accessibilité</legend>
+                    <div class="form-group mrgn-tp-lg">
+                        <label for="ProjectType">Type de projet</label>
+                        <select class="form-control" name="ProjectType" id="ProjectType">
+                            <option disabled="disabled" selected="selected">Faites votre choix...</option>
+                            <option value="New">Nouveau</option>
+                            <option value="On-going">En cours</option>
+                        </select>
+                    </div>
+                </fieldset>
+                
+                <fieldset id="toggle4" class="hidden">
+                    <legend>Évaluation des technologies de l'information et des communications (TIC) sur le web</legend>
+                    <div class="form-group mrgn-tp-lg">
+                        <label for="Websitecategory">Catégorie de site web</label>
+                        <select class="form-control" name="Websitecategory" id="Websitecategory">
+                            <option disabled="disabled" selected="selected">Faites votre choix...</option>
+                            <option value="Internal">Interne</option>
+                            <option value="External">Externe</option>
+                        </select>
+                    </div>
+                    <div class="form-group mrgn-tp-lg">
+                        <label for="url">URL du site</label>
+                        <input class="form-control full-width" id="url" name="url" type="url" />
+                    </div>
+                    <div class="form-group mrgn-tp-lg">
+                        <label for="username">Nom d'utilisateur</label>
+                        <input class="form-control full-width" id="username" name="username" type="text" />
+                    </div>
+                    <div class="form-group mrgn-tp-lg">
+                        <label for="password">Mot de passe</label> 
+                        <input class="form-control full-width" id="password" name="password" type="text" />
+                    </div>
+                </fieldset>
+                
+                <fieldset id="toggle5" class="hidden">
+                    <legend>Évaluation des technologies de l'information et des communications (TIC) de produits COTS</legend>
+                    <div class="form-group mrgn-tp-lg">
+                        <label for="ProductName">Nom du produit</label>
+                        <input class="form-control full-width" id="ProductName" name="ProductName" type="text" />
+                    </div>
+                    <div class="form-group mrgn-tp-lg">
+                        <label for="cots_url">URL du site</label>
+                        <input class="form-control full-width" id="cots_url" name="cots_url" type="url" />
+                    </div>
+                    <div class="form-group mrgn-tp-lg">
+                        <label for="cots_username">Nom d'utilisateur</label>
+                        <input class="form-control full-width" id="cots_username" name="cots_username" type="text" />
+                    </div>
+                    <div class="form-group mrgn-tp-lg">
+                        <label for="cots_password">Mot de passe</label> 
+                        <input class="form-control full-width" id="cots_password" name="cots_password" type="text" />
+                    </div>
+                </fieldset>
+                
+                <fieldset id="toggle6" class="hidden">
+                    <legend>Examen de l'accessibilité des documents</legend>
+                    <div class="form-group mrgn-tp-lg">
+						<label for="documentType">Type de document</label>
+						<input aria-describedby="docSend" class="form-control full-width" id="documentType" name="documentType" type="text" />
+						<div id="docSend" class="alert alert-warning mrgn-tp-lg">
+							<p>Vous serez contacté par un de nos évaluateurs pour vos documents une fois qu'ils seront prêts à être examinés.</p>
+						</div>
+                    </div>
+                </fieldset>
+                
+                <fieldset id="toggle7" class="hidden">
+                    <legend>Marchés publics et conseils généraux sur les technologies de l'information et de la communication (TIC) accessibles</legend>
+                    <div class="form-group mrgn-tp-lg">
+                        <label for="ICT_Type">Type de technologies de l'information et des communications (TIC)</label>
+                        <select class="form-control" name="ICT_Type" id="ICT_Type">
+                            <option disabled="disabled" selected="selected">Faites votre choix...</option>
+                            <option value="Software">Logiciels</option>
+                            <option value="Hardware">Matériel</option>
+                            <option value="Information and communications technology (ICT) with Two Way Communication">Technologies de l'information et des communications (TIC) avec communication bidirectionnelle</option>
+                            <option value="Relay and Emergency Services">Services de relais et d'urgence</option>
+                        </select>
+                    </div>
+                </fieldset>
+
+                <div id="clientInformation" class="hidden">
+                <fieldset>
+                    <legend>Customer Information</legend>
+                    <div class="form-group">
+                        <label for="LastName">Nom de famille</label>
+                        <input class="form-control full-width" id="LastName" autocomplete="family-name" name="LastName" type="text" />
+                    </div>
+                    <div class="form-group">
+                        <label for="FirstName">Prénom</label>
+                        <input class="form-control full-width" id="FirstName" autocomplete="given-name" name="FirstName" type="text" />
+                    </div>
+                    <div class="form-group">
+                        <label for="PhoneNumber">Numéro de téléphone (y compris l'indicatif régional)</label>
+                        <input class="form-control" id="PhoneNumber" placeholder="333-333-3333" name="PhoneNumber" autocomplete="tel" data-rule-phoneUS="true" type="tel" />
+                    </div>
+                    <div class="form-group">
+                        <label for="EmailAddress">Adresse électronique</label>
+                        <input class="form-control full-width" id="EmailAddress" name="EmailAddress" autocomplete="email" type="email" />
+					</div>
+										
+					<fieldset>
+						<legend>Date limite</legend>
+						<div class="row">
+							<div class="form-group col-md-3">
+								<label for="year">Année (YYYY)</label>
+								<input type="number" class="form-control" id="year" name="year" />
+							</div>
+							<div class="form-group col-md-3">
+								<label for="month">Mois</label>
+								<input type="number" class="form-control" id="month" name="month" />
+							</div>
+							<div class="form-group col-md-3">
+								<label for="day">Journée</label>
+								<input type="number" class="form-control" id="day" name="day" />
+							</div>
+						</div>
+					</fieldset>
+
+                </fieldset>
                 <div class="form-group mrgn-tp-lg">
-                    <label for="satisfaction">Satisfaction globale</label>
-                    <select class="form-control" id="satisfaction" name="satisfaction">
-                        <option label="Satisfaction globale">Satisfaction globale</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                    </select>
+                    <label for="additionalInfo">Toute information complémentaire</label>
+                    <textarea name="additionalInfo" id="additionalInfo" class="form-control full-width expand"></textarea>
                 </div>
-                <div class="form-group mrgn-tp-lg">
-                    <label for="response">Temps de réponse</label>
-                    <select class="form-control" id="response" name="response">
-                        <option label="Temps de réponse">Temps de réponse</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                    </select>
-                </div>
-            </fieldset>
-            <div class="form-group mrgn-tp-lg">
-                <label for="comment">Avez-vous des suggestions pour améliorer notre service ou des commentaires supplémentaires&nbsp;?</label>
-                <textarea class="form-control expand full-width" name="comment" id="comment" cols="30" rows="10"></textarea>
             </div>
+           <input type="submit" value="Soumettre" disabled="disabled" class="btn btn-primary btn-lg" />
+           <input type="reset" value="Réinitialiser" class="btn btn-primary btn-lg">
         </form>
-
-
-
-
+        </div>
 <div id="def-preFooter"></div>
 <script src="./scripts/preFooter.min.js"></script>
 </main>
@@ -104,26 +252,6 @@
 <script src="./scripts/appFooter.min.js"></script>
 <script src="./scripts/refFooter.min.js"></script>
 <script src="./scripts/bati-itao.min.js"></script>
-
-<script>
-
-    // Get URL string and add it to hidden input
-    function getParameterByName(name, url) {
-    if (!url) url = window.location.href;
-        name = name.replace(/[\[\]]/g, '\\$&');
-        var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
-            results = regex.exec(url);
-        if (!results) return null;
-        if (!results[2]) return '';
-        return decodeURIComponent(results[2].replace(/\+/g, ' '));
-    }
-
-    var getID = getParameterByName('id');
-    $(function() {
-        $('#a11y-id').val(getID);
-    });
-
-</script>
 
 </body>
 
