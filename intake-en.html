@@ -65,17 +65,23 @@
                         <li data-wb-fieldflow='{"action": "toggle", "toggle": "#toggle1 , #clientInformation", "live": true}'>Assistive Technology Assessment, Support and Loan Bank</li>
                         <li data-wb-fieldflow='{"action": "toggle", "toggle": "#toggle2 , #clientInformation", "live": true}'>IT Accessibility Coaching, Awareness and Curriculum</li>
                         <li data-wb-fieldflow='{"action": "toggle", "toggle": "#toggle3 , #clientInformation", "live": true}'>Accessibility Compliance Project</li>
-                        <li data-wb-fieldflow='{"action": "toggle", "toggle": "#toggle4 , #clientInformation", "live": true}'>Web ICT Assessment</option>
-                        <li data-wb-fieldflow='{"action": "toggle", "toggle": "#toggle5 , #clientInformation", "live": true}'>COTS ICT Assessment</option>
-                        <li data-wb-fieldflow='{"action": "toggle", "toggle": "#toggle6 , #clientInformation", "live": true}'>Document Accessibility Review</option>
-                        <li data-wb-fieldflow='{"action": "toggle", "toggle": "#toggle7 , #clientInformation", "live": true}'>Procurement and General Advice on Accessible ICT</option>
-                        <li data-wb-fieldflow='{"action": "toggle", "toggle": "#toggle8 , #clientInformation , #generalRequest", "live": true}'>Other</option>
+                        <li data-wb-fieldflow='{"action": "toggle", "toggle": "#toggle4 , #clientInformation", "live": true}'>Web ICT Assessment</li>
+                        <li data-wb-fieldflow='{"action": "toggle", "toggle": "#toggle5 , #clientInformation", "live": true}'>COTS ICT Assessment</li>
+                        <li data-wb-fieldflow='{"action": "toggle", "toggle": "#toggle6 , #clientInformation", "live": true}'>Document Accessibility Review</li>
+                        <li data-wb-fieldflow='{"action": "toggle", "toggle": "#toggle7 , #clientInformation", "live": true}'>Procurement and General Advice on Accessible ICT</li>
+                        <li data-wb-fieldflow='{"action": "toggle", "toggle": "#followUp , #generalRequest , #clientInformation", "live": true}'>Follow up on previous request</li>
+                        <li data-wb-fieldflow='{"action": "toggle", "toggle": "#clientInformation , #generalRequest", "live": true}'>Other</li>
                     </ul>
                 </div>
 
                 <div class="form-group mrgn-tp-lg hidden" id="generalRequest">
                     <label for="request">Describe you request</label>
                     <textarea class="full-width expand form-control" name="request" id="request"></textarea>
+				</div>
+				
+                <div class="form-group mrgn-tp-lg hidden" id="followUp">
+                    <label for="caseNumber">Case number</label>
+                    <textarea class="full-width expand form-control" name="caseNumber" id="caseNumber"></textarea>
                 </div>
 
                 
@@ -178,7 +184,8 @@
                 <fieldset id="toggle6" class="hidden">
                     <legend>Document Accessibility Review</legend>
                     <div class="form-group mrgn-tp-lg">
-                        <label for="documentType">Document Type</label>
+						<label for="documentType">Document Type</label>
+						<p>Please send your documents to our generic email addess </p>
                         <input class="form-control full-width" id="documentType" name="documentType" type="text" />
                     </div>
                 </fieldset>
