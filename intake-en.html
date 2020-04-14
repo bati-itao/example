@@ -52,7 +52,6 @@
                 <input name="ID" type="hidden" value="Thompson" />
                 <input name="ESDCEmailForm" type="hidden" value="Y" />
                 <input name="whichSurvey" type="hidden" value="Intake">
-                <input name="a11y-id" id="a11y-id" type="hidden" value="">
 
                 <div class="wb-fieldflow" data-wb-fieldflow='{"noForm": true}'>
                     <p>Select a Service Category</p>
@@ -256,25 +255,6 @@
 <script src="./scripts/appFooter.min.js"></script>
 <script src="./scripts/refFooter.min.js"></script>
 <script src="./scripts/bati-itao.min.js"></script>
-<script>
-
-    // Get URL string and add it to hidden input
-    function getParameterByName(name, url) {
-    if (!url) url = window.location.href;
-        name = name.replace(/[\[\]]/g, '\\$&');
-        var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
-            results = regex.exec(url);
-        if (!results) return null;
-        if (!results[2]) return '';
-        return decodeURIComponent(results[2].replace(/\+/g, ' '));
-    }
-
-    var getID = getParameterByName('id');
-    $(function() {
-        $('#a11y-id').val(getID);
-    });
-
-</script>
 
 </body>
 
