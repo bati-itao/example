@@ -185,8 +185,10 @@
                     <legend>Document Accessibility Review</legend>
                     <div class="form-group mrgn-tp-lg">
 						<label for="documentType">Document Type</label>
-						<p>Please send your documents to our generic email addess </p>
-                        <input class="form-control full-width" id="documentType" name="documentType" type="text" />
+						<input aria-describedby="docSend" class="form-control full-width" id="documentType" name="documentType" type="text" />
+						<div id="docSend" class="alert alert-warning mrgn-tp-lg">
+							<p>You will be contacted by one of our assessors for your documents once they are ready to be reviewed.</p>
+						</div>
                     </div>
                 </fieldset>
                 
