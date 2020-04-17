@@ -6,11 +6,11 @@
 <head>
     <meta charset="utf-8">
     <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW) wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
-    <title>Formulaire d'admission - EDSC / Bureau de l’accessibilité de la TI</title>
+    <title>Formulaire de demande - EDSC / Bureau de l’accessibilité de la TI</title>
     <meta content="width=device-width,initial-scale=1" name="viewport">
     <!-- Meta data -->
     <meta name="description"
-        content="Formulaire d'admission pour le Bureau de l’accessibilité de la TI">
+        content="Formulaire de demande pour le Bureau de l’accessibilité de la TI">
     <!-- Meta data-->
     <!-- Load closure template scripts -->
     <script src="https://ssl-templates.services.gc.ca/rn/cls/wet/gcweb/cdts/compiled/soyutils.js"></script>
@@ -42,7 +42,7 @@
         });
     </script>
     <main property="mainContentOfPage" class="container">
-        <h1 property="name" id="wb-cont">Formulaire d'admission</h1>
+        <h1 property="name" id="wb-cont">Formulaire de demande</h1>
         
         <div class="wb-frmvld">
         <form action="#" id="a11y-survey" method="post">
@@ -54,13 +54,13 @@
                 <div class="wb-fieldflow" data-wb-fieldflow='{"noForm": true}'>
                     <p>Sélectionnez une catégorie de service</p>
                     <ul>
-                        <li data-wb-fieldflow='{"action": "toggle", "toggle": "#toggle1 , #clientInformation", "live": true}'>Banque d&rsquo;évaluation, de soutien et de prêt des technologies d&rsquo;assistance</li>
-                        <li data-wb-fieldflow='{"action": "toggle", "toggle": "#toggle2 , #clientInformation", "live": true}'>Coaching, sensibilisation et programme d&rsquo;études sur l&rsquo;accessibilité des TI</li>
-                        <li data-wb-fieldflow='{"action": "toggle", "toggle": "#toggle3 , #clientInformation", "live": true}'>Projet de conformité à l&rsquo;accessibilité</li>
+                        <li data-wb-fieldflow='{"action": "toggle", "toggle": "#toggle1 , #clientInformation", "live": true}'>Évaluation d&rsquo;une technologie adapative, soutien et banque de prêt</li>
+                        <li data-wb-fieldflow='{"action": "toggle", "toggle": "#toggle2 , #clientInformation", "live": true}'>Encadrement, sensibilisation et cursus de formation en accessibilité des TI</li>
+                        <li data-wb-fieldflow='{"action": "toggle", "toggle": "#toggle3 , #clientInformation", "live": true}'>Projet de conformité en accessibilité</li>
                         <li data-wb-fieldflow='{"action": "toggle", "toggle": "#toggle4 , #clientInformation", "live": true}'>Évaluation des technologies de l&rsquo;information et des communications (TIC) sur le web</li>
-                        <li data-wb-fieldflow='{"action": "toggle", "toggle": "#toggle5 , #clientInformation", "live": true}'>Évaluation des technologies de l&rsquo;information et des communications (TIC) de produits COTS</li>
-                        <li data-wb-fieldflow='{"action": "toggle", "toggle": "#toggle6 , #clientInformation", "live": true}'>Examen de l&rsquo;accessibilité des documents</li>
-                        <li data-wb-fieldflow='{"action": "toggle", "toggle": "#toggle7 , #clientInformation", "live": true}'>Marchés publics et conseils généraux sur les technologies de l&rsquo;information et de la communication (TIC) accessibles</li>
+                        <li data-wb-fieldflow='{"action": "toggle", "toggle": "#toggle5 , #clientInformation", "live": true}'>Évaluation des technologies de l&rsquo;information et des communications (TIC) de logiciel commercial standard</li>
+                        <li data-wb-fieldflow='{"action": "toggle", "toggle": "#toggle6 , #clientInformation", "live": true}'>Révision de document en accessibilité</li>
+                        <li data-wb-fieldflow='{"action": "toggle", "toggle": "#toggle7 , #clientInformation", "live": true}'>Acquisition et conseils généraux des TIC accessible</li>
                         <li data-wb-fieldflow='{"action": "toggle", "toggle": "#followUp , #generalRequest , #clientInformation", "live": true}'>Suivi de la demande précédente</li>
                         <li data-wb-fieldflow='{"action": "toggle", "toggle": "#clientInformation , #generalRequest", "live": true}'>Autres</li>
                     </ul>
@@ -77,13 +77,13 @@
 				</div>
 				
                 <fieldset id="toggle1" class="hidden">
-                    <legend>Banque d&rsquo;évaluation, de soutien et de prêt des technologies d'assistance</legend>
+                    <legend>Évaluation d&rsquo;une technologie adapative, soutien et banque de prêt</legend>
                     <div class="form-group mrgn-tp-lg">
                         <label for="DisabilityType">Type de handicap</label>
                         <select class="form-control" name="DisabilityType" id="DisabilityType">
                             <option disabled="disabled" selected="selected">Faites votre choix...</option>
                             <option value="Low Vision">Basse vision</option>
-                            <option value="Blindness">Aveugles</option>
+                            <option value="Blindness">Cécité</option>
                             <option value="Mobility / Dexterity">Mobilité / Dextérité</option>
                             <option value="Hearing Impairment">Déficience auditive</option>
                             <option value="Cognition">Cognition</option>
@@ -111,7 +111,7 @@
                             <option value="Coaching half day for managers and up">Demi-journée de coaching pour les gestionnaires et plus</option>
                             <option value="Coaching full day for developers">Une journée entière de coaching pour les développeurs</option>
                             <option value="Awareness">Sensibilisation</option>
-                            <option value="Curriculum">Curriculum</option>
+                            <option value="Curriculum">Cursus de formation</option>
                         </select>
                     </div>
                 </fieldset>
@@ -199,7 +199,7 @@
 
                 <div id="clientInformation" class="hidden">
                 <fieldset>
-                    <legend>Customer Information</legend>
+                    <legend>Information du Client</legend>
                     <div class="form-group">
                         <label for="LastName">Nom de famille</label>
                         <input class="form-control full-width" id="LastName" autocomplete="family-name" name="LastName" type="text" />
