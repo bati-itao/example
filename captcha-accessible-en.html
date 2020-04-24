@@ -116,6 +116,65 @@
 				</ul>
 			</section>
 			<section>
+				<h3>Code Example</h3>
+				<p>The following code is the bare minimum needed for this to work. This is a website registration form that requires a username, a password (to be entered twice), and an email address.  The Birthday field is a honeypot field.</p>
+				<h4>HTML</h4>
+				<code><pre>
+	&lt;form id="regForm" action="registrationPage" method="POST" novalidate&gt;
+		&lt;div&gt;
+			&lt;label for="username"&gt;&lt;/label&gt;
+			&lt;input id="username" name="username" aria-describedby="formatforusername" required&gt;
+		&lt;/div&gt;
+		&lt;div&gt;
+			&lt;label for="password"&gt;&lt;/label&gt;
+			&lt;input id="password" name="password" required type="password"&gt;
+		&lt;/div&gt;
+		&lt;div&gt;
+			&lt;label for="repassword"&gt;&lt;/label&gt;
+			&lt;input id="repassword" name="repassword" required type="password"&gt;
+		&lt;/div&gt;
+		&lt;div&gt;
+			&lt;label for="email"&gt;&lt;/label&gt;
+			&lt;input id="email" name="email" required type="email"&gt;
+		&lt;/div&gt;
+		&lt;div&gt;
+			&lt;label for="birthday" class="invisibleStuff"&gt;&lt;/label&gt;
+			&lt;input id="birthday" name="birthday" class="hpclass" required&gt;
+		&lt;/div&gt;
+				
+		&lt;div&gt;
+			&lt;input id="saveBtn" name="saveBtn" value="Register" type="submit"&gt;
+		&lt;/div&gt;
+	&lt;/form&gt;
+	&lt;script src="user.js"&gt;</pre>
+				</code>
+				<h4>CSS</h4>
+				<code><pre>
+.invisibleStuff {
+	position: absolute;
+	height: 1px;
+	width: 1px;
+	clip: rect(1px, 1px, 1px, 1px);
+	overflow: hidden;
+	margin: 0;
+}
+					</pre></code>
+				<h4>Javascript</h4>
+				<code><pre>
+function hp () {
+	let hps = document.querySelectorAll("input.hpclass");
+	window["wb-frmvld"] = {"ignore" : "input.hpclass"};  // This line is only necessary if the page uses WET validation
+	for (let i = 0; i &lt; hps.length; i++) {
+		hps[i].setAttribute("tabindex", "-1");
+		hps[i].classList.add("invisibleStuff");
+		hps[i].parentNode.setAttribute("aria-hidden", "true");
+	}
+}
+
+document.addEventListener("DOMContentLoaded", hp, false);
+					</pre></code>
+			</section>
+			<section>
 				<h3>Accessibility Assessment of UAT solution:</h3>
 				<ul>
 					<li>A browser's autofill won't (or, at least <em>shouldn't</em>) autofill a name, or email, or anything if the <code>input</code> element has the attribute <code>autocomplete="off"</code>, as honeypot fields should.</li>
