@@ -100,36 +100,37 @@
 			<h2>Honeypot technique</h2>
 			<section>
 				<h3>Preamble</h3>
-				<p>How the honeypot technique should work: </p>
+				<p>How the honeypot technique should work:</p>
 				<ul>
 					<li>Expose a form field to a bot, but not a human.</li>
-					<li>The field should have a programmatically determinable purpose (such as through the use of a <code>label</code> element that&rsquo;s associated to the <code>input</code> so a bot can figure out what&rsquo;s being asked.</li>
-					<li>That field should be something that the form <em>could</em> be asking for, but isn&rsquo;t, such as a birthdate, or a secondary phone number.</li>
-					<li>A bot should have as much evidence as possible that the field should be filled in, like even adding &ldquo;<code>required</code>&rdquo; to the <code>label</code> text, and <strong>not</strong> embedding a class name like &ldquo;<code>hidden</code>&rdquo; or having <code>style=&rdquo;display:none;&rdquo;</code>.</li>
-					<li>Add &lsquo;<code>required</code>&rsquo; attributes to the <code>input</code>s, then get the browser to ignore it, remove with JavaScript just before form submission or use the &lsquo;<code>novalidate</code>&rsquo; attribute on the <code>form</code> element.</li>
-					<li>In order for humans to avoid filling it in:</li>
-					<li>It should be hidden visually (like using <code>class=&rdquo;sr-only&rdquo;</code>, <code>class=&rdquo;wb-inv&rdquo;</code> or <code>class=&rdquo;vital&rdquo;</code> on this page)</li>
-					<li>It should be removed form the tab order using <code>tabindex=&rdquo;-1&rdquo;</code></li>
-					<li>They should be hidden from screen readers using JavaScript to apply <code>aria-hidden=&rdquo;true&rdquo;</code> on the parent element of the <code>input</code> and <code>label</code></li>
+					<li>The field should have a programmatically determinable purpose (such as through the use of a <code>label</code> element that's associated to the <code>input</code> so a bot can figure out what's being asked.</li>
+					<li>That field should be something that the form <em>could</em> be asking for, but isn't, such as a birthdate, or a secondary phone number.</li>
+					<li>A bot should have as much evidence as possible that the field should be filled in, like even adding "<code>required</code>" to the <code>label</code> text, and <strong>not</strong> embedding a class name like "<code>hidden</code>" or having <code>style="display:none;"</code>.</li>
+					<li>Add <code>required</code> attributes to the <code>&lt;input&gt;</code>, then get the browser to ignore it: either remove with JavaScript just before form submission or use the <code>novalidate</code> attribute on the <code>&lt;form&gt;</code> element.</li>
+					<li>In order for humans to avoid filling it in:
+						<ul>
+						<li>It should be hidden visually (like using <code>class="sr-only"</code>, <code>class="wb-inv"</code>)</li>
+						<li>It should be removed form the tab order using <code>tabindex="-1"</code></li>
+						<li>They should be hidden from screen readers using JavaScript to apply <code>aria-hidden="true"</code> on an ancestor element of the <code>input</code> and <code>label</code></li></ul></li>
 					<li>If, after submitting, the server detects a value in that form field, it should ignore the form submission.</li>
 				</ul>
 			</section>
 			<section>
 				<h3>Accessibility Assessment of UAT solution:</h3>
 				<ul>
-					<li>A browser&rsquo;s autofill won&rsquo;t (or, at least <em>shouldn&rsquo;t</em>) do autofill on name, or email, or anything if the <code>input</code> element has the attribute <code>autocomplete=&rdquo;off&rdquo;</code>, which these honeypot fields do. So that&rsquo;s good.</li>
-					<li>When tabbing through the page using a screen reader (NVDA+Firefox) in Forms Mode the honeypot fields are missed, this is good. This is because the <code>input</code>s have <code>tabindex=&rdquo;-1&rdquo;</code>.</li>
+					<li>A browser's autofill won't (or, at least <em>shouldn't</em>) autofill a name, or email, or anything if the <code>input</code> element has the attribute <code>autocomplete="off"</code>, as honeypot fields should.</li>
+					<li>When tabbing through the page using a screen reader (NVDA+Firefox) in Forms Mode the honeypot fields are missed, this is good. This is because the <code>input</code>s have <code>tabindex="-1"</code>.</li>
 					<li>On the iPhone test we went through the page by swiping right (which is typical behavior for a screen reader user on mobile) and we do hear the honeypot field labels.</li>
 					<li>On a desktop with a screen reader, when we read the page from top to bottom without going into forms mode, the screen reader does read out the honeypot field labels.</li>
-					<li>The reason that the honeypot fields are missed in forms mode, but not regular mode is that the <code>input</code>s have <code>tabindex=&rdquo;-1&rdquo;</code>, which removes them from the focus order. However, the <code>label</code> elements are only hidden from view similar to how <code>class=&rdquo;wb-inv&rdquo;</code> in WET hides information visually, but exposes it to screen readers.</li>
+					<li>The reason that the honeypot fields are missed in forms mode, but not regular mode is that the <code>input</code>s have <code>tabindex="-1"</code>, which removes them from the focus order. However, the <code>label</code> elements are only hidden from view similar to how <code>class="wb-inv"</code> in WET hides information visually, but exposes it to screen readers.</li>
 				</ul>
 				<h3>Required fixes for this solution to work properly:</h3>
 				<ul>
-					<li>Apply <code>aria-hidden=&rdquo;true&rdquo;</code> to a parent element of the <code>label</code>s for the honeypot fields. For example: <code>tr class=&rdquo;vital&rdquo; aria-hidden=&rdquo;true&rdquo;</code>. It&rsquo;s best if <code>aria-hidden</code> attributes are applied using JavaScript, rather than hardcoded into HTML, just to make it that much harder for a bot to detect if a field is hidden or not.</li>
-					<li>Add the &ldquo;required&rdquo; attribute on the honeypot <code>input</code>s and make sure these are ignored by using &lsquo;novalidate&rsquo; attribute on the <code>form</code> element. It&rsquo;s best if the &lsquo;required&rsquo; attribute is hardcoded into the HTML so a bot sees that the field is required, and will provide a value for it.</li>
-					<li>The <code>input</code>s have <code>tabindex=&rdquo;-1&rdquo;</code> but please ensure that the <code>tabindex=&rdquo;-1&rdquo;</code>s are injected using JavaScript as to avoid a bot determining that they are honeypot fields.</li>
+					<li>Apply <code>aria-hidden="true"</code> to a parent element of the <code>label</code>s for the honeypot fields. For example: <code>tr class="vital" aria-hidden="true"</code>. It's best if <code>aria-hidden</code> attributes are applied using JavaScript, rather than hardcoded into HTML, just to make it that much harder for a bot to detect if a field is hidden or not.</li>
+					<li>Add the "required" attribute on the honeypot <code>input</code>s and make sure these are ignored by using 'novalidate' attribute on the <code>form</code> element. It's best if the 'required' attribute is hardcoded into the HTML so a bot sees that the field is required, and will provide a value for it.</li>
+					<li>The <code>input</code>s have <code>tabindex="-1"</code> but please ensure that the <code>tabindex="-1"</code>s are injected using JavaScript as to avoid a bot determining that they are honeypot fields.</li>
 				</ul>
-				<p>On top of the of the above fixes it&rsquo;s also suggested that a timer be implemented. A timer should measure the time between when the user types into the first form field (first keystroke) to the time the form submission occurs. A bot will typically fill out a form very quickly and then submit so we can detect bots by measuring that time. The timer can be a bit subjective but what we really want to prevent here are the simple bots that are not &ldquo;pausing&rdquo; so a timer like 10 seconds should be sufficient. A form submission that took 10 seconds from first keyboard stroke to form submission can&rsquo;t be human as there are too many fields to fill out within that span of time.</p>
+				<p>On top of the of the above fixes it's also suggested that a timer be implemented. A timer should measure the time between when the user types into the first form field (first keystroke) to the time the form submission occurs. A bot will typically fill out a form very quickly and then submit so we can detect bots by measuring that time. The timer can be a bit subjective but what we really want to prevent here are the simple bots that are not "pausing" so a timer like 10 seconds should be sufficient. A form submission that took 10 seconds from first keyboard stroke to form submission can't be human as there are too many fields to fill out within that span of time.</p>
 			</section>
 		</section>
 		<div id="def-preFooter"></div>
