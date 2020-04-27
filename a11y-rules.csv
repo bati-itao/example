@@ -1,0 +1,83 @@
+Title	url	User Impact	Disabilities Affected	WCAG Success Criteria
+&lt;blink&gt; elements are deprecated and must not be used	https://dequeuniversity.com/rules/axe/3.5/blink	Serious	Low Vision, Mobility, Cognitive	2.2.2 Pause, Stop, Hide
+&lt;dl&gt; elements must only directly contain properly-ordered &lt;dt&gt; and &lt;dd&gt; groups, &lt;script&gt;, or &lt;template&gt; elements	https://dequeuniversity.com/rules/axe/3.5/definition-list	Serious	Blind, Deafblind	1.3.1 Info and Relationships
+&lt;dt&gt; and &lt;dd&gt; elements must be contained by a &lt;dl&gt;	https://dequeuniversity.com/rules/axe/3.5/dlitem	Serious	Blind, Deafblind, Mobility	1.3.1 Info and Relationships
+&lt;html&gt; element must have a lang attribute	https://dequeuniversity.com/rules/axe/3.5/html-has-lang	Serious	Blind, Deafblind, Cognitive	3.1.1 Language of Page
+&lt;html&gt; element must have a valid value for the lang attribute	https://dequeuniversity.com/rules/axe/3.5/html-lang-valid	Serious	Blind, Deafblind, Cognitive	3.1.1 Language of Page
+&lt;html&gt; elements with lang and xml:lang must have the same base language	https://dequeuniversity.com/rules/axe/3.5/html-xml-lang-mismatch	Moderate	Blind, Deafblind, Cognitive	3.1.1 Language of Page
+&lt;li&gt; elements must be contained in a &lt;ul&gt; or &lt;ol&gt;	https://dequeuniversity.com/rules/axe/3.5/listitem	Serious	Blind, Deaf, Mobility	1.3.1 Info and Relationships
+&lt;marquee&gt; elements are deprecated and must not be used	https://dequeuniversity.com/rules/axe/3.5/marquee	Serious	Low Vision, Mobility, Cognitive	2.2.2 Pause, Stop, Hide
+&lt;object&gt; elements must have alternate text	https://dequeuniversity.com/rules/axe/3.5/object-alt	Serious	Blind, Deafblind	1.1.1 Non-text Content
+&lt;ul&gt; and &lt;ol&gt; must only directly contain &lt;li&gt;, &lt;script&gt; or &lt;template&gt; elements	https://dequeuniversity.com/rules/axe/3.5/list	Serious	Blind, Deafblind	1.3.1 Info and Relationships
+accesskey attribute value must be unique	https://dequeuniversity.com/rules/axe/3.5/accesskeys	Serious	Blind, Low Vision, Mobility	Not specified, or not applicable
+Active &lt;area&gt; elements must have alternate text	https://dequeuniversity.com/rules/axe/3.5/area-alt	Critical	Blind, Deafblind, Mobility	1.1.1 Non-text Content, 2.4.4 Link Purpose (In Context), 4.1.2 Name, Role, Value
+"All &lt;th&gt; elements and elements with role=""columnheader"" or role=""rowheader"" must have data cells they describe"	https://dequeuniversity.com/rules/axe/3.5/th-has-data-cells	Serious	Blind, Deafblind	1.3.1 Info and Relationships
+All cells in a &lt;table&gt; element that use the headers attribute must only refer to other cells of that same &lt;table&gt;	https://dequeuniversity.com/rules/axe/3.5/td-headers-attr	Serious	Blind, Deafblind	1.3.1 Info and Relationships
+All non-empty &lt;td&gt; elements in tables larger than 3 by 3 must have an associated table header	https://dequeuniversity.com/rules/axe/3.5/td-has-header	Critical	Blind, Deafblind	1.3.1 Info and Relationships
+All page content must be contained by landmarks	https://dequeuniversity.com/rules/axe/3.5/region	Moderate	Blind, Deafblind, Mobility	Not specified, or not applicable
+ARIA attributes must conform to valid names	https://dequeuniversity.com/rules/axe/3.5/aria-valid-attr	Critical	Blind, Deafblind, Mobility	4.1.2 Name, Role, Value
+ARIA attributes must conform to valid values	https://dequeuniversity.com/rules/axe/3.5/aria-valid-attr-value	Critical	Blind, Deafblind, Mobility	4.1.2 Name, Role, Value
+ARIA input fields have an accessible name	https://dequeuniversity.com/rules/axe/3.5/aria-input-field-name	Serious	Blind, Deafblind, Mobility	4.1.2 Name, Role, Value
+ARIA role must be appropriate for the element	https://dequeuniversity.com/rules/axe/3.5/aria-allowed-role	Minor	Blind, Deafblind, Mobility	Best Practice
+ARIA roles used must conform to valid values	https://dequeuniversity.com/rules/axe/3.5/aria-roles	Critical	Blind, Deafblind, Mobility	4.1.2 Name, Role, Value
+ARIA toggle fields have an accessible name	https://dequeuniversity.com/rules/axe/3.5/aria-toggle-field-name	Serious	Blind, Deafblind, Mobility	4.1.2 Name, Role, Value
+aria-hidden elements do not contain focusable elements	https://dequeuniversity.com/rules/axe/3.5/aria-hidden-focus	Serious	Blind, Low Vision, Deafblind	4.1.2 Name, Role, Value
+"aria-hidden=""true"" must not be present on the document &lt;body&gt;"	https://dequeuniversity.com/rules/axe/3.5/aria-hidden-body	Critical	Blind	4.1.2 Name, Role, Value
+Audio must have controls that provide users with the ability to stop automatically played audio after three seconds	https://dequeuniversity.com/rules/axe/3.5/no-autoplay-audio	Moderate	Blind, Deafblind, Cognitive	1.4.2 Audio Control
+Autocomplete attribute must be used correctly	https://dequeuniversity.com/rules/axe/3.5/autocomplete-valid	Serious	Attention Deficit, Blind, Low Vision, Deafblind, Mobility, Cognitive	1.3.5 Identify Input Purpose
+Banner landmark must not be contained in another landmark	https://dequeuniversity.com/rules/axe/3.5/landmark-banner-is-top-level	Moderate	Blind, Deafblind	Not specified, or not applicable
+Bold, italic text and font-size are not used to style &lt;p&gt; elements as a heading	https://dequeuniversity.com/rules/axe/3.5/p-as-heading	Serious	Blind, Deafblind, Mobility	1.3.1 Info and Relationships
+Buttons must have discernible text	https://dequeuniversity.com/rules/axe/3.5/button-name	Critical	Blind, Deafblind	4.1.2 Name, Role, Value
+Certain ARIA roles must be contained by particular parent elements	https://dequeuniversity.com/rules/axe/3.5/aria-required-parent	Critical	Blind, Deafblind, Mobility	1.3.1 Info and Relationships
+Certain ARIA roles must contain particular children	https://dequeuniversity.com/rules/axe/3.5/aria-required-children	Critical	Blind, Deafblind, Mobility	1.3.1 Info and Relationships
+Complementary landmarks and/or asides are top level	https://dequeuniversity.com/rules/axe/3.5/landmark-complementary-is-top-level	Moderate	Sighted Keyboard Users, Blind, Deafblind, Mobility	Not specified, or not applicable
+Contentinfo landmark must not be contained in another landmark	https://dequeuniversity.com/rules/axe/3.5/landmark-contentinfo-is-top-level	Moderate	Sighted Keyboard Users, Blind, Deafblind	Not specified, or not applicable
+CSS Media queries are not used to lock display orientation	https://dequeuniversity.com/rules/axe/3.5/css-orientation-lock	Serious	Attention Deficit, Dyslexia, Sighted Keyboard Users, Low Vision, Mobility, Cognitive	1.3.4 Orientation
+Data or header cells should not be used to give caption to a data table	https://dequeuniversity.com/rules/axe/3.5/table-fake-caption	Serious	Blind, Deafblind	1.3.1 Info and Relationships
+Documents must contain a title element to aid in navigation	https://dequeuniversity.com/rules/axe/3.5/document-title	Serious	Blind, Deafblind, Mobility	2.4.2 Page Titled
+"Elements containing <code>role=""img""</code> have an alternative text"	https://dequeuniversity.com/rules/axe/3.5/role-img-alt	Serious	Blind, Deafblind	1.1.1 Non-text Content
+Elements in the focus order need a role appropriate for interactive content	https://dequeuniversity.com/rules/axe/3.5/focus-order-semantics	Minor	Blind, Deafblind, Mobility	Not specified, or not applicable
+Elements must only use allowed ARIA attributes	https://dequeuniversity.com/rules/axe/3.5/aria-allowed-attr	Critical	Blind, Deafblind, Mobility	4.1.2 Name, Role, Value
+Elements should not have tabindex greater than zero	https://dequeuniversity.com/rules/axe/3.5/tabindex	Serious	Blind, Deafblind, Mobility	Not specified, or not applicable
+Ensure that links with the same accessible name serve a similar purpose	https://dequeuniversity.com/rules/axe/3.5/identical-links-same-purpose	Minor	Blind, Deafblind	2.4.9 Link Purpose (Link Only)
+Ensure that scrollable region has keyboard access	https://dequeuniversity.com/rules/axe/3.5/scrollable-region-focusable	Moderate	Blind, Deafblind, Mobility	2.4.7 Focus Visible
+Ensures the document has at most one main landmark	https://dequeuniversity.com/rules/axe/3.5/landmark-no-duplicate-main	Moderate	Blind, Deafblind, Mobility	Not specified, or not applicable
+Form &lt;input&gt; elements must have labels	https://dequeuniversity.com/rules/axe/3.5/label	Critical	Blind, Low Vision, Deafblind, Mobility	1.3.1 Info and Relationships, 4.1.2 Name, Role, Value
+Form &lt;input&gt; elements should have a visible label	https://dequeuniversity.com/rules/axe/3.5/label-title-only	Serious	Blind, Deafblind, Mobility	Not specified, or not applicable
+Form fields do not have duplicate labels	https://dequeuniversity.com/rules/axe/3.5/form-field-multiple-labels	Moderate	Blind, Low Vision, Deafblind, Mobility	3.3.2 Labels or Instructions
+Frames must be tested with axe-core	https://dequeuniversity.com/rules/axe/3.5/frame-tested	Critical	Sighted Keyboard Users, Blind, Deafblind	Not specified, or not applicable
+Frames must have a unique title attribute	https://dequeuniversity.com/rules/axe/3.5/frame-title-unique	Serious	Blind, Deafblind, Mobility	Not specified, or not applicable
+Frames must have title attribute	https://dequeuniversity.com/rules/axe/3.5/frame-title	Serious	Blind, Deafblind, Mobility	2.4.1 Bypass Blocks, 4.1.2 Name, Role, Value
+Heading levels should only increase by one	https://dequeuniversity.com/rules/axe/3.5/heading-order	Moderate	Blind, Deafblind, Mobility	Not specified, or not applicable
+Headings must not be empty	https://dequeuniversity.com/rules/axe/3.5/empty-heading	Minor	Blind, Deafblind, Mobility	Not specified, or not applicable
+Hidden content on the page cannot be analyzed	https://dequeuniversity.com/rules/axe/3.5/hidden-content	Minor	Sighted Keyboard Users, Blind, Colorblindness	Not specified, or not applicable
+ID attribute value must be unique	https://dequeuniversity.com/rules/axe/3.5/duplicate-id-active	Critical	Blind, Deafblind	4.1.1 Parsing
+ID attribute values must be unique	https://dequeuniversity.com/rules/axe/3.5/duplicate-id	Minor	Blind, Deafblind	4.1.1 Parsing
+IDs used in ARIA and labels must be unique	https://dequeuniversity.com/rules/axe/3.5/duplicate-id-aria	Critical	Blind, Deafblind	4.1.1 Parsing
+Image buttons must have alternate text	https://dequeuniversity.com/rules/axe/3.5/input-image-alt	Critical	Blind, Deafblind, Mobility	1.1.1 Non-text Content
+Images must have alternate text	https://dequeuniversity.com/rules/axe/3.5/image-alt	Critical	Blind, Deafblind	1.1.1 Non-text Content
+Inline text spacing must be adjustable with custom stylesheets	https://dequeuniversity.com/rules/axe/3.5/avoid-inline-spacing	Serious	Attention Deficit, Blind, Low Vision, Deafblind, Mobility, Cognitive	1.4.12 Text Spacing
+Input buttons must have discernible text	https://dequeuniversity.com/rules/axe/3.5/input-button-name	Critical	Blind, Deafblind	4.1.2 Name, Role, Value
+Label and name from content mismatch	https://dequeuniversity.com/rules/axe/3.5/label-content-name-mismatch	Serious	Blind, Low Vision, Deafblind, Mobility	2.5.3 Label in Name
+Landmarks must have a unique role or role/label/title (i.e. accessible name) combination	https://dequeuniversity.com/rules/axe/3.5/landmark-unique	Moderate	Sighted Keyboard Users, Blind, Deafblind	Not specified, or not applicable
+lang attribute must have a valid value	https://dequeuniversity.com/rules/axe/3.5/valid-lang	Serious	Blind, Deafblind, Cognitive	3.1.2 Language of Parts
+Links must be distinguished from surrounding text in a way that does not rely on color	https://dequeuniversity.com/rules/axe/3.5/link-in-text-block	Serious	Low Vision, Colorblindness	1.4.1 Use of Color
+Links must have discernible text	https://dequeuniversity.com/rules/axe/3.5/link-name	Serious	Blind, Deaf, Mobility	2.4.4 Link Purpose (In Context), 4.1.2 Name, Role, Value
+Main landmark must not be contained in another landmark	https://dequeuniversity.com/rules/axe/3.5/landmark-main-is-top-level	Moderate	Blind, Deaf, Mobility	Not specified, or not applicable
+Page must contain a level-one heading	https://dequeuniversity.com/rules/axe/3.5/page-has-heading-one	Moderate	Sighted Keyboard Users, Blind, Low Vision, Deafblind	Not specified, or not applicable
+Page must have means to bypass repeated blocks	https://dequeuniversity.com/rules/axe/3.5/bypass	Serious	Blind, Deafblind	2.4.1 Bypass Blocks
+Page must have one main landmark	https://dequeuniversity.com/rules/axe/3.5/landmark-one-main	Moderate	Blind, Deafblind, Mobility	Not specified, or not applicable
+Page must not have more than one banner landmark	https://dequeuniversity.com/rules/axe/3.5/landmark-no-duplicate-banner	Moderate	Sighted Keyboard Users, Blind, Deafblind	Not specified, or not applicable
+Page must not have more than one contentinfo landmark	https://dequeuniversity.com/rules/axe/3.5/landmark-no-duplicate-contentinfo	Moderate	Sighted Keyboard Users, Blind, Deafblind	Not specified, or not applicable
+Required ARIA attributes must be provided	https://dequeuniversity.com/rules/axe/3.5/aria-required-attr	Critical	Blind, Deafblind, Mobility	4.1.2 Name, Role, Value
+Scope attribute should be used correctly on tables	https://dequeuniversity.com/rules/axe/3.5/scope-attr-valid	Critical	Blind, Deafblind, Mobility	Not specified, or not applicable
+Server-side image maps must not be used	https://dequeuniversity.com/rules/axe/3.5/server-side-image-map	Minor	Blind, Deafblind, Mobility	2.1.1 Keyboard
+SVG images and graphics require accessible text	https://dequeuniversity.com/rules/axe/3.5/svg-img-alt	Serious	Blind, Deafblind, Mobility	1.1.1 Non-text Content
+Text elements must have sufficient color contrast against the background	https://dequeuniversity.com/rules/axe/3.5/color-contrast	Serious	Low Vision, Colorblindness	1.4.3 Contrast (Minimum)
+Text of buttons and links should not be repeated in the image alternative	https://dequeuniversity.com/rules/axe/3.5/image-redundant-alt	Minor	Blind, Deafblind	Not specified, or not applicable
+The &lt;caption&gt; element should not contain the same text as the summary attribute	https://dequeuniversity.com/rules/axe/3.5/table-duplicate-name	Minor	Blind, Deafblind	Not specified, or not applicable
+The skip-link target should exist and be focusable	https://dequeuniversity.com/rules/axe/3.5/skip-link	Moderate	Blind, Deafblind, Mobility	Not specified, or not applicable
+Timed refresh must not exist	https://dequeuniversity.com/rules/axe/3.5/meta-refresh	Critical	Blind, Deafblind, Mobility	2.2.1 Timing Adjustable, 2.2.4 Interruptions, 3.2.5 Change on Request
+Use aria-roledescription on elements with a semantic role	https://dequeuniversity.com/rules/axe/3.5/aria-roledescription	Serious	Blind, Deafblind, Mobility	4.1.2 Name, Role, Value
+Users should be able to zoom and scale the text up to 500%	https://dequeuniversity.com/rules/axe/3.5/meta-viewport-large	Minor	Low Vision	Not specified, or not applicable
+Zooming and scaling must not be disabled	https://dequeuniversity.com/rules/axe/3.5/meta-viewport	Critical	Low Vision	1.4.4 Resize text
