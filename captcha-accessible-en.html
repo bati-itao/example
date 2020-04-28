@@ -116,23 +116,76 @@
 				</ul>
 			</section>
 			<section>
-				<h3>Accessibility Assessment of UAT solution:</h3>
-				<ul>
-					<li>A browser's autofill won't (or, at least <em>shouldn't</em>) autofill a name, or email, or anything if the <code>input</code> element has the attribute <code>autocomplete="off"</code>, as honeypot fields should.</li>
-					<li>When tabbing through the page using a screen reader (NVDA+Firefox) in Forms Mode the honeypot fields are missed, this is good. This is because the <code>input</code>s have <code>tabindex="-1"</code>.</li>
-					<li>On the iPhone test we went through the page by swiping right (which is typical behavior for a screen reader user on mobile) and we do hear the honeypot field labels.</li>
-					<li>On a desktop with a screen reader, when we read the page from top to bottom without going into forms mode, the screen reader does read out the honeypot field labels.</li>
-					<li>The reason that the honeypot fields are missed in forms mode, but not regular mode is that the <code>input</code>s have <code>tabindex="-1"</code>, which removes them from the focus order. However, the <code>label</code> elements are only hidden from view similar to how <code>class="wb-inv"</code> in WET hides information visually, but exposes it to screen readers.</li>
-				</ul>
-				<h3>Required fixes for this solution to work properly:</h3>
-				<ul>
-					<li>Apply <code>aria-hidden="true"</code> to a parent element of the <code>label</code>s for the honeypot fields. For example: <code>tr class="vital" aria-hidden="true"</code>. It's best if <code>aria-hidden</code> attributes are applied using JavaScript, rather than hardcoded into HTML, just to make it that much harder for a bot to detect if a field is hidden or not.</li>
-					<li>Add the "required" attribute on the honeypot <code>input</code>s and make sure these are ignored by using 'novalidate' attribute on the <code>form</code> element. It's best if the 'required' attribute is hardcoded into the HTML so a bot sees that the field is required, and will provide a value for it.</li>
-					<li>The <code>input</code>s have <code>tabindex="-1"</code> but please ensure that the <code>tabindex="-1"</code>s are injected using JavaScript as to avoid a bot determining that they are honeypot fields.</li>
-				</ul>
-				<p>On top of the of the above fixes it's also suggested that a timer be implemented. A timer should measure the time between when the user types into the first form field (first keystroke) to the time the form submission occurs. A bot will typically fill out a form very quickly and then submit so we can detect bots by measuring that time. The timer can be a bit subjective but what we really want to prevent here are the simple bots that are not "pausing" so a timer like 10 seconds should be sufficient. A form submission that took 10 seconds from first keyboard stroke to form submission can't be human as there are too many fields to fill out within that span of time.</p>
-			</section>
-		</section>
+				<h3>Code Example</h3>
+				<p>The following code is the bare minimum needed for this to work. This is a website registration form that requires a username, a password (to be entered twice), and an email address.  The Birthday field is a honeypot field.</p>
+				<h4>HTML</h4>
+				<code><pre>
+	&lt;form id="regForm" action="registrationPage" method="POST" novalidate&gt;
+		&lt;div&gt;
+			&lt;label for="username"&gt;&lt;/label&gt;
+			&lt;input id="username" name="username" aria-describedby="formatforusername" required&gt;
+		&lt;/div&gt;
+		&lt;div&gt;
+			&lt;label for="password"&gt;&lt;/label&gt;
+			&lt;input id="password" name="password" required type="password"&gt;
+		&lt;/div&gt;
+		&lt;div&gt;
+			&lt;label for="repassword"&gt;&lt;/label&gt;
+			&lt;input id="repassword" name="repassword" required type="password"&gt;
+		&lt;/div&gt;
+		&lt;div&gt;
+			&lt;label for="email"&gt;&lt;/label&gt;
+			&lt;input id="email" name="email" required type="email"&gt;
+		&lt;/div&gt;
+		&lt;div&gt;
+			&lt;label for="birthday" class="invisibleStuff"&gt;&lt;/label&gt;
+			&lt;input id="birthday" name="birthday" class="hpclass" required&gt;
+		&lt;/div&gt;
+				
+		&lt;div&gt;
+			&lt;input id="saveBtn" name="saveBtn" value="Register" type="submit"&gt;
+		&lt;/div&gt;
+	&lt;/form&gt;
+	&lt;script src="user.js"&gt;</pre>
+				</code>
+				<h4>CSS</h4>
+				<code><pre>
+.invisibleStuff {
+	position: absolute;
+	height: 1px;
+	width: 1px;
+	clip: rect(1px, 1px, 1px, 1px);
+	overflow: hidden;
+	margin: 0;
+}
+.hpclass {
+	z-index: -5;
+	font-size: 0pt;
+	position: relative;
+	top: -5em;
+	height: 0px;
+	overflow: hidden;
+	width: 0;
+	line-height: 0px;
+	margin: 0;
+	padding: 0;			 
+}
+					</pre></code>
+				<h4>Javascript</h4>
+				<code><pre>
+function hp () {
+	let hps = document.querySelectorAll("input.hpclass");
+	window["wb-frmvld"] = {"ignore" : "input.hpclass"};  // This line is only necessary if the page uses WET validation
+	for (let i = 0; i &lt; hps.length; i++) {
+		hps[i].setAttribute("tabindex", "-1");
+		hps[i].classList.add("invisibleStuff");
+		hps[i].parentNode.setAttribute("aria-hidden", "true");
+	}
+}
+
+document.addEventListener("DOMContentLoaded", hp, false);
+					</pre></code>
+			</section>	
 		<div id="def-preFooter"></div>
 		<script src="./scripts/preFooter.min.js"></script>
 	</main>
