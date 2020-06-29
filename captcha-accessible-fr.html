@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="no-js lt-ie9" lang="fr" dir="ltr"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="fr" dir="ltr">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW) wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
+    <title>Les CAPTCHA sont-ils accessibles? - EDSC / Bureau de l’accessibilité de la TI</title>
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <!-- Meta data -->
+    <meta name="description"
+        content="Pourquoi les strat&eacute;gies habituelles utilis&eacute;es en ligne ne sont-elles pas accessibles et ne constituent-elles pas une option pour nous? Les CAPTCHA suivants sont g&eacute;n&eacute;ralement utilis&eacute;s pour pr&eacute;venir les attaques par un BOT, mais ne sont pas accessibles ou enti&egrave;rement conformes, et/ou pr&eacute;sentent d&rsquo;autres d&eacute;fis identifi&eacute;s.">
+    <!-- Meta data-->
+    <!-- Load closure template scripts -->
+    <script src="https://ssl-templates.services.gc.ca/rn/cls/wet/gcweb/cdts/compiled/soyutils.js"></script>
+    <script src="https://ssl-templates.services.gc.ca/rn/cls/wet/gcweb/cdts/compiled/wet-fr.js"></script>
+    <!-- Write closure template -->
+    <script src="https://bati-itao.github.io/scripts/refTop.min.js"></script>
+</head>
+
+<body vocab="https://schema.org/" typeof="WebPage">
+    <div id="def-top">
+    </div>
+    <!-- Write closure template -->
+    <script>
+        var defTop = document.getElementById("def-top");
+        defTop.outerHTML = wet.builder.appTop({
+            "appName": [{
+                "text": "EDSC / Bureau de l’accessibilité de la TI",
+                "href": "https://bati-itao.github.io/index-fr.html"
+            }],
+           "breadcrumbs" : [{
+                "title": "Accueil",
+                "href" : "https://bati-itao.github.io/index-fr.html"
+            }],
+            "lngLinks": [{
+                "lang": "en",
+                "href": "./captcha-accessible-en.html",
+                "text": "English"
+            }],
+            "menuPath": "https://bati-itao.github.io/ajax/menu-fr.html"
+        });
+    </script>
+    <main property="mainContentOfPage" class="container">
+        <h1 property="name" id="wb-cont">Les CAPTCHA sont-ils accessibles?</h1>
+		<p>Pourquoi les strat&eacute;gies habituelles utilis&eacute;es en ligne ne sont-elles pas accessibles et ne constituent-elles pas une option pour nous? Les CAPTCHA suivants sont g&eacute;n&eacute;ralement utilis&eacute;s pour pr&eacute;venir les attaques par un BOT, mais ne sont pas accessibles ou enti&egrave;rement conformes, et/ou pr&eacute;sentent d&rsquo;autres d&eacute;fis identifi&eacute;s.</p>
+		
+		<section>
+			<h2>Les CAPTCHA</h2>
+			<section>
+				<h3>CAPTCHA fond&eacute;s sur des images</h3>
+				<p>Non accessibles, car les personnes ayant une d&eacute;ficience visuelle ne peuvent pas voir les images et saisir l&rsquo;information demand&eacute;e.</p>
+			</section>
+			<section>
+				<h3>CAPTCHA audio</h3>
+				<p>Fonctionnera avec les lecteurs d&rsquo;&eacute;cran, car l&rsquo;utilisateur peut &laquo;&nbsp;entendre&nbsp;&raquo; le ou les mots, mais peut &ecirc;tre exploit&eacute; par un robot intelligent et pr&eacute;sente le m&ecirc;me probl&egrave;me que les CAPTCHA fond&eacute;s sur des images pour les personnes ayant une d&eacute;ficience visuelle. Voici un article qui traite en d&eacute;tail du <a hreflang="en" href="https://gbhackers.com/security-researcher-breaks-googles-recaptcha-v2-using-googles-tool/"> CAPTCHA audio (disponible seulment en anglais)</a>.</p>
+			</section>
+			<section>
+				<h3>reCAPTCHA</h3>
+				<p>Utilise des mots num&eacute;ris&eacute;s, mais pr&eacute;sente le m&ecirc;me probl&egrave;me que les CAPTCHA fond&eacute;s sur des images pour les personnes ayant une d&eacute;ficience visuelle.</p>
+			</section>
+		</section>
+		
+		<section>
+			<h2>Solutions de rechange</h2>
+			<p>En plus des CAPTCHA susmentionn&eacute;s, les &eacute;l&eacute;ments suivants sont &eacute;galement utilis&eacute;s pour pr&eacute;venir les attaques.</p>
+			<section>
+				<h3>Les noms communs ne sont pas utilis&eacute;s pour les attributs</h3>
+				<p>Lorsque les robots naviguent sur le Web, ils cherchent habituellement des noms de champ communs comme l&rsquo;adresse de courriel, le nom, etc. Cette information peut &ecirc;tre obscurcie pour d&eacute;courager les robots, mais cela cr&eacute;erait de la confusion pour nos utilisateurs finaux l&eacute;gitimes. Cette option est accessible, mais elle n&rsquo;est pas conviviale.</p>
+			</section>
+			<section>
+				<h3>Champs de saisie masqu&eacute;s</h3>
+				<p>Un champ qui n&rsquo;est pas requis aux fins op&eacute;rationnelles peut &ecirc;tre masqu&eacute; &agrave; l&rsquo;aide de feuilles de style en cascade, Cascading Style Sheets (CSS). Un BOT remplirait habituellement ce champ cach&eacute; et lorsqu'il soumettra le formulaire, nous pourrons v&eacute;rifier si ce champ contient des donn&eacute;es, auquel cas nous rejetons simplement la soumission. Cette option est accessible, mais elle peut &ecirc;tre pirat&eacute;e.</p>
+			</section>
+			<section>
+				<h3>Question al&eacute;atoire</h3>
+				<p>Des questions al&eacute;atoires peuvent &ecirc;tre pos&eacute;es en fonction des &laquo;&nbsp;autres&nbsp;&raquo; donn&eacute;es saisies par l&rsquo;utilisateur. Par exemple&nbsp;: Quels sont les deuxi&egrave;me et septi&egrave;me chiffres de votre num&eacute;ro de t&eacute;l&eacute;phone? Cette option est accessible, mais elle peut &ecirc;tre pirat&eacute;e et il faut d&eacute;ployer beaucoup d&rsquo;efforts pour la mettre en &oelig;uvre.</p>
+			</section>
+			<section>
+				<h3>Champ d&rsquo;adresse courriel/processus de confirmation</h3>
+				<p>La saisie d&rsquo;une adresse courriel et la mise en &oelig;uvre d&rsquo;un processus de confirmation par courriel prot&egrave;gent contre les attaques BOT parce qu&rsquo;un courriel contenant un lien de confirmation unique est envoy&eacute; &agrave; l&rsquo;utilisateur imm&eacute;diatement apr&egrave;s la soumission du formulaire. La confirmation r&eacute;ussie au moyen de ce lien permet de v&eacute;rifier l&rsquo;authenticit&eacute; de l&rsquo;utilisateur et de conserver les donn&eacute;es. Si l&rsquo;abonnement n&rsquo;est pas confirm&eacute; dans un d&eacute;lai d&eacute;termin&eacute; par l&rsquo;entreprise, les donn&eacute;es sont supprim&eacute;es. Ainsi, les donn&eacute;es enregistr&eacute;es dans la base de donn&eacute;es proviennent d&rsquo;un utilisateur r&eacute;el et non d&rsquo;un BOT, ce qui assure l&rsquo;int&eacute;grit&eacute; et l&rsquo;exactitude des donn&eacute;es.</p>
+			</section>
+		</section>
+		
+		<section>
+			<h2>Renseignements suppl&eacute;mentaires</h2>
+			<p>Pour s&eacute;curiser davantage les donn&eacute;es du formulaire, il est recommand&eacute; de mettre en &oelig;uvre la fonctionnalit&eacute; additionnelle suivante.</p>
+			<h3>Champs de saisie masqu&eacute;s</h3>
+			<p>Comme on l&rsquo;a vu, cette option n&rsquo;est pas enti&egrave;rement s&eacute;curis&eacute;e en soi, mais lorsqu&rsquo;elle est utilis&eacute;e avec le champ d&rsquo;adresse courriel/processus de confirmation, elle ajoute une couche suppl&eacute;mentaire pour prot&eacute;ger les donn&eacute;es et n&rsquo;est pas difficile &agrave; mettre en &oelig;uvre. Pour assurer l&rsquo;accessibilit&eacute; et la conformit&eacute;, ce champ sera masqu&eacute; visuellement, y compris pour les lecteurs d&rsquo;&eacute;cran, et la valeur d&rsquo;entr&eacute;e de ce champ sera v&eacute;rifi&eacute;e avant d&rsquo;accepter les donn&eacute;es.</p>
+		</section>
+		
+		<section>
+			<h2>Recommandation</h2>
+			<p>Il est recommand&eacute; de mettre en &oelig;uvre les m&eacute;thodes suivantes pour le formulaire Web afin d&rsquo;optimiser l&rsquo;exp&eacute;rience et l&rsquo;accessibilit&eacute; des utilisateurs et d&rsquo;assurer l&rsquo;int&eacute;grit&eacute; et l&rsquo;exactitude des donn&eacute;es&nbsp;:</p>
+			<ul>
+			<li>Inclure un champ d&rsquo;adresse courriel/processus de confirmation obligatoire et ne conserver les donn&eacute;es qu&rsquo;une fois la confirmation r&eacute;ussie.</li>
+			<li>Activer la validation des champs masqu&eacute;s au moment de la soumission des formulaires.</li>
+			</ul>
+			<p>Pour en savoir plus sur les CAPTCHA et d&rsquo;autres m&eacute;thodes pour pr&eacute;venir les attaques par un BOT, nous vous encourageons &agrave; visiter la page <a lang="en" hreflang="en" href="https://www.w3.org/WAI/GL/wiki/Captcha_Alternatives_and_thoughts">Captcha Alternative and thoughts <span lang="fr">(disponible seulment en anglais)</span></a> sur le site Web du W3C.</p>
+		</section>
+
+		<section>
+			<h2>Technique Honeypot</h2>
+			<section>
+				<h3>Pr&eacute;ambule</h3>
+				<p>Fonctionnement de la technique Honeypot&nbsp;:</p>
+				<ul>
+					<li>Il s&rsquo;agit d&rsquo;exposer un champ de formulaire &agrave; un robot, mais pas &agrave; un humain.</li>
+					<li>Le champ doit avoir un but pouvant &ecirc;tre d&eacute;termin&eacute; par un programme informatique, comme en utilisant un &eacute;l&eacute;ment <code>label</code> associ&eacute; &agrave; l&rsquo;<code>input</code> afin qu&rsquo;un robot puisse d&eacute;terminer ce qui est demand&eacute;.</li>
+					<li>Ce champ devrait &ecirc;tre quelque chose que l'on <em>pourrait</em> demander dans le formulaire, mais qui ne l&rsquo;est pas, comme une date de naissance ou un num&eacute;ro de t&eacute;l&eacute;phone secondaire.</li>
+					<li>Un robot devrait avoir autant d&rsquo;indices que possible pour que le champ puisse &ecirc;tre rempli, par exemple en ajoutant &laquo;&nbsp;<code>required</code>&nbsp;&raquo; au texte de l'&eacute;l&eacute;ment <code>label</code>; il <strong>ne</strong> faut <strong>pas</strong> ench&acirc;sser un nom de classe comme &laquo;&nbsp;<code>hidden</code>&nbsp;&raquo; ou <code>style="display:none;"</code>.</li>
+					<li>Ajoutez les attributs <code>required</code> &agrave; l&rsquo;<code>&lt;input&gt;</code>, puis demandez au navigateur de ne pas en tenir compte, soit en les supprimant avec JavaScript juste avant la soumission du formulaire, soit en utilisant l&rsquo;attribut <code>novalidate</code> de l&rsquo;&eacute;l&eacute;ment <code>&lt;form&gt;</code>.</li>
+					<li>Pour &eacute;viter que les humains le remplissent&nbsp;:
+						<ul>
+							<li>Il doit &ecirc;tre masqu&eacute; visuellement (comme utiliser <code>class="sr-only"</code>, <code>class="wb-inv"</code>).</li>
+							<li>Il doit &ecirc;tre retir&eacute; de l&rsquo;ordre des onglets en utilisant <code>tabindex="-1"</code>.</li>
+							<li>Ils doivent &ecirc;tre cach&eacute;s des lecteurs d&rsquo;&eacute;cran en utilisant JavaScript pour appliquer <code>aria-hidden="true"</code> sur un &eacute;l&eacute;ment parent de <code>input</code> et de <code>label</code>.</li>
+						</ul>
+					</li>
+					<li>Si, apr&egrave;s la soumission, le serveur d&eacute;tecte une valeur dans le champ du formulaire, il doit ignorer la soumission du formulaire.</li>
+				</ul>
+			</section>
+
+			<section class="wb-prettify all-pre">
+				<h3>Exemple de code</h3>
+				<p>Le code suivant est le strict minimum n&eacute;cessaire pour que cela fonctionne. Il s&rsquo;agit d&rsquo;un formulaire d&rsquo;inscription au site Web qui n&eacute;cessite un nom d&rsquo;utilisateur, un mot de passe (&agrave; saisir deux fois) et une adresse courriel. Le champ Date de naissance est un champ Honeypot.</p>
+
+				<section>
+					<h4>HTML</h4>
+<pre><code>
+&lt;form id="regForm" action="registrationPage" method="POST" novalidate&gt;
+&lt;div&gt;
+	&lt;label for="username"&gt;&lt;/label&gt;
+	&lt;input id="username" name="username" aria-describedby="formatforusername" required /&gt;
+&lt;/div&gt;
+&lt;div&gt;
+	&lt;label for="password"&gt;&lt;/label&gt;
+	&lt;input id="password" name="password" required type="password" /&gt;
+&lt;/div&gt;
+&lt;div&gt;
+	&lt;label for="repassword"&gt;&lt;/label&gt;
+	&lt;input id="repassword" name="repassword" required type="password" /&gt;
+&lt;/div&gt;
+&lt;div&gt;
+	&lt;label for="email"&gt;&lt;/label&gt;
+	&lt;input id="email" name="email" required type="email" /&gt;
+&lt;/div&gt;
+&lt;div&gt;
+	&lt;label for="birthday" class="invisibleStuff"&gt;&lt;/label&gt;
+	&lt;input id="birthday" name="birthday" class="hpclass" required /&gt;
+&lt;/div&gt;
+		
+&lt;div&gt;
+	&lt;input id="saveBtn" name="saveBtn" value="Register" type="submit" /&gt;
+&lt;/div&gt;
+&lt;/form&gt;
+&lt;script src="user.js"&gt;
+</code></pre>
+				</section>
+				<section>
+					<h4>CSS</h4>
+<pre><code>
+.invisibleStuff {
+	position: absolute;
+	height: 1px;
+	width: 1px;
+	clip: rect(1px, 1px, 1px, 1px);
+	overflow: hidden;
+	margin: 0;
+}
+
+.hpclass {
+	z-index: -5;
+	font-size: 0pt;
+	position: relative;
+	top: -5em;
+	height: 0px;
+	overflow: hidden;
+	width: 0;
+	line-height: 0px;
+	margin: 0;
+	padding: 0;			 
+}
+
+</code></pre>
+				</section>
+				<section>
+					<h4>Javascript</h4>
+<pre><code>
+function hp () {
+	let hps = document.querySelectorAll("input.hpclass");
+	window["wb-frmvld"] = {"ignore" : "input.hpclass"};  // This line is only necessary if the page uses WET validation
+
+	for (let i = 0; i &lt; hps.length; i++) {
+		hps[i].setAttribute("tabindex", "-1");
+		hps[i].classList.add("invisibleStuff");
+		hps[i].parentNode.setAttribute("aria-hidden", "true");
+	}
+}
+	
+document.addEventListener("DOMContentLoaded", hp, false);
+</code></pre>
+				</section>
+			</section>
+		</section>
+
+		<div id="def-preFooter"></div>
+		<script src="https://bati-itao.github.io/scripts/preFooter.min.js"></script>
+	</main>
+<div id="def-footer"></div>
+<script src="https://bati-itao.github.io/scripts/appFooter.min.js"></script>
+<script src="https://bati-itao.github.io/scripts/refFooter.min.js"></script>
+<script src="https://bati-itao.github.io/scripts/bati-itao.min.js"></script>
+</body>
+
+</html>
